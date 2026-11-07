@@ -341,6 +341,49 @@ label{font-size:0.65rem;color:var(--muted2);letter-spacing:.8px;text-transform:u
 .xp-mg{font-size:0.66rem;color:var(--muted2);flex:none}
 .xp-sec{font-size:0.62rem;letter-spacing:1px;text-transform:uppercase;color:var(--muted2);padding:14px 4px 6px}
 .fin-ov{z-index:450;align-items:center}
+.tour-ov{z-index:480;background:var(--bg);align-items:stretch}
+.tour{width:100%;max-width:480px;margin:0 auto;display:flex;flex-direction:column;padding:calc(18px + env(safe-area-inset-top)) 22px calc(18px + env(safe-area-inset-bottom))}
+.tour-top{display:flex;justify-content:space-between;align-items:center;min-height:32px}
+.tour-brand{font-family:'Manrope',sans-serif;font-weight:300;letter-spacing:8px;color:var(--text2);font-size:0.95rem}
+.tour-skip{background:none;border:none;color:var(--muted2);font:600 0.8rem 'Manrope',sans-serif;cursor:pointer;padding:6px 2px}
+.tour-track{flex:1;display:flex;overflow:hidden;touch-action:pan-y}
+.tour-slides{display:flex;width:100%;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.tour-slide{flex:0 0 100%;display:flex;flex-direction:column;justify-content:center;gap:22px;padding:10px 2px}
+.tour-art{background:var(--s1);border:1px solid var(--b0);border-radius:14px;padding:18px 16px;min-height:150px;display:flex;flex-direction:column;justify-content:center;gap:10px}
+.tour-kicker{font-size:0.66rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted2);font-weight:600}
+.tour-h{font-family:'Saira Semi Condensed',sans-serif;font-weight:600;font-size:2rem;line-height:1.08;color:var(--text2);text-wrap:balance;margin-top:4px}
+.tour-p{font-size:0.92rem;line-height:1.55;color:var(--text);max-width:36ch}
+.tour-dots{display:flex;gap:7px;justify-content:center;margin:14px 0}
+.tour-dot{width:7px;height:7px;border-radius:50%;background:var(--b2);transition:all .25s}
+.tour-dot.on{background:var(--red);width:20px;border-radius:4px}
+.tour-nav{display:flex;gap:10px}
+.tour-nav .btn{flex:1;padding:13px}
+.tour-nav .btn-outline[hidden]{display:none}
+/* mini mockups */
+.tm-row{display:grid;grid-template-columns:26px 1fr 1fr 40px;gap:6px;align-items:center}
+.tm-num{font:500 0.6rem 'IBM Plex Mono',monospace;color:var(--muted2);background:var(--s0);border-radius:4px;text-align:center;padding:5px 0}
+.tm-num.w{color:var(--orange);background:var(--orangeg);border:1px solid rgba(232,194,122,.3)}
+.tm-box{position:relative;background:var(--s0);border:1px solid var(--b1);border-radius:6px;padding:12px 8px 6px;font-size:0.95rem;color:var(--text2);font-variant-numeric:tabular-nums}
+.tm-box i{position:absolute;top:2px;right:5px;font:normal 0.5rem 'IBM Plex Mono',monospace;color:var(--muted2)}
+.tm-chk{height:36px;border-radius:7px;border:1px solid var(--b1);display:flex;align-items:center;justify-content:center;color:transparent}
+.tm-chk.on{background:var(--green);border-color:var(--green);color:#0a0b0d}
+.tm-qw{display:flex;gap:4px}.tm-qw span{flex:1;text-align:center;font-size:0.6rem;color:var(--muted2);border:1px solid var(--b0);border-radius:5px;padding:5px 0}
+.tm-card{border:1px solid var(--b0);border-radius:8px;padding:10px 12px;background:var(--s2)}
+.tm-card b{font-family:'Saira Semi Condensed',sans-serif;font-weight:600;color:var(--text2);font-size:1rem}
+.tm-card small{display:block;font-size:0.66rem;color:var(--muted2);margin-top:2px}
+.tm-hdr{display:flex;align-items:center;gap:8px;background:var(--s3);border-radius:8px;padding:9px 10px}
+.tm-hdr b{flex:1;font-family:'Saira Semi Condensed',sans-serif;font-weight:600;color:var(--text2)}
+.tm-pill{font:600 0.58rem 'Manrope',sans-serif;border:1px solid var(--b1);color:var(--muted2);border-radius:5px;padding:3px 7px}
+.tm-timer{display:flex;align-items:center;gap:14px}
+.tm-ring{width:58px;height:58px;border-radius:50%;border:4px solid var(--b1);border-top-color:var(--red);border-right-color:var(--red);display:flex;align-items:center;justify-content:center;font-weight:300;font-size:1.3rem;color:var(--text2);transform:rotate(-20deg)}
+.tm-ring span{transform:rotate(20deg)}
+.tm-notif{flex:1;background:var(--s2);border:1px solid var(--b0);border-radius:12px;padding:9px 11px;font-size:0.7rem;color:var(--text)}
+.tm-notif b{display:block;color:var(--text2);font-size:0.74rem}
+.tm-pr{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--b0);padding:7px 0;font-size:0.82rem;color:var(--text2)}
+.tm-pr:last-child{border-bottom:none}
+.tm-pr em{font-style:normal;font-weight:600;font-variant-numeric:tabular-nums}
+.tm-spark{height:44px;width:100%}
+@media (prefers-reduced-motion:reduce){.tour-slides{transition:none}}
 .fin-modal{border-radius:16px;margin:0 14px;max-height:88vh;border:1px solid var(--b1)}
 #fin-body{padding:26px 22px 18px}
 .fin-kicker{font-size:0.66rem;letter-spacing:2px;text-transform:uppercase;color:var(--green);font-weight:600}
@@ -611,6 +654,7 @@ canvas.chart{width:100%!important;height:160px!important}
   </div>
   <div class="backup-box" style="margin-top:10px">
     <div class="backup-box-title">About</div>
+    <div class="st-row"><span class="st-lbl lnk" onclick="showTour()">Take the tour again</span></div>
     <div class="st-row"><a class="st-lbl lnk" href="https://teesheetapp.github.io/Fitness-Tracker/lift-log/privacy.html" target="_blank" rel="noopener">Privacy Policy</a></div>
     <div class="st-row"><a class="st-lbl lnk" href="https://teesheetapp.github.io/Fitness-Tracker/lift-log/terms.html" target="_blank" rel="noopener">Terms of Use</a></div>
     <div class="st-row"><a class="st-lbl lnk" href="https://teesheetapp.github.io/Fitness-Tracker/lift-log/support.html" target="_blank" rel="noopener">Help &amp; Support</a></div>
@@ -676,6 +720,14 @@ canvas.chart{width:100%!important;height:160px!important}
   <div class="modal">
     <div class="modal-hdr"><div class="modal-title">Quick workout</div><button class="modal-close" onclick="closeQuickStart()">✕</button></div>
     <div class="modal-scroll" id="qs-list"></div>
+  </div>
+</div>
+<div id="tour-ov" class="overlay tour-ov" role="dialog" aria-label="Welcome tour">
+  <div class="tour">
+    <div class="tour-top"><span class="tour-brand">WORK</span><button class="tour-skip" id="tour-skip" onclick="endTour('skip')">Skip</button></div>
+    <div class="tour-track" id="tour-track"><div class="tour-slides" id="tour-slides"></div></div>
+    <div class="tour-dots" id="tour-dots"></div>
+    <div class="tour-nav"><button class="btn btn-outline" id="tour-back" onclick="tourGo(tourI-1)">Back</button><button class="btn btn-red" id="tour-next" onclick="tourNext()">Next</button></div>
   </div>
 </div>
 <div id="fin-ov" class="overlay fin-ov">
@@ -875,6 +927,7 @@ async function finishSignIn(d){
   storeSession(d);authNeeded=false;
   hideLoginGate();renderAccount();renderSyncBadge();go('today');
   await syncFromSupabase();renderToday();
+  maybeShowTour();
 }
 async function signUp(){
   const email=gv('lg-email'),pw=document.getElementById('lg-pw')?.value||'';
@@ -1980,6 +2033,62 @@ function removeLogEx(ei){
   if(!confirm(`Remove ${ex.name} from this session? Your saved workout isn't changed.`))return;
   const snap=snapLog();logWo.exercises.splice(ei,1);snap.splice(ei,1);stopTimer();rerenderLog(snap);
 }
+
+// ══ FIRST-RUN TOUR ══
+let tourI=0,tourX=null;
+function tourSlides(){
+  const chk='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>';
+  const native=!!NP();
+  return [
+    {k:'Welcome',h:'Your training log, built for between sets',p:'Plan your lifts, log them in seconds, and watch your numbers climb. Here’s the 30-second tour.',
+     art:`<div style="text-align:center;padding:10px 0"><div style="font-weight:300;letter-spacing:14px;font-size:2.4rem;color:var(--text2);margin-right:-14px">WORK</div><div style="font-size:0.7rem;color:var(--muted2);margin-top:8px;letter-spacing:1px">LIFT LOG</div></div>`},
+    {k:'Plan',h:'Start with a plan',p:'Pick a starting program, or build your own workouts and schedule them in Phases. Today always shows what’s next.',
+     art:`<div class="tm-card"><b>Push / Pull / Legs</b><small>3 days a week · Intermediate</small></div><div class="tm-card" style="opacity:.6"><b>Upper / Lower</b><small>4 days a week · Intermediate</small></div>`},
+    {k:'Log',h:'Log a set in seconds',p:'Last time’s numbers sit in the corner of every box. Nudge the weight with +/−, then check off the set.',
+     art:`<div class="tm-row"><span class="tm-num">S1</span><span class="tm-box"><i>last 185</i>190</span><span class="tm-box"><i>last 6</i>6</span><span class="tm-chk on">${chk}</span></div>
+          <div class="tm-row"><span class="tm-num">S2</span><span class="tm-box"><i>last 185</i>190</span><span class="tm-box"><i>last 6</i>6</span><span class="tm-chk"></span></div>
+          <div class="tm-qw"><span>−5</span><span>−2.5</span><span>+2.5</span><span>+5</span><span>+10</span></div>`},
+    {k:'Rest',h:'The rest timer starts itself',p:native?'Checking off a set starts your rest. When it’s up you’ll get an alert, even with your phone locked, so allow notifications when asked.':'Checking off a set starts your rest countdown. In the iPhone app you also get an alert when rest is up, even with the phone locked.',
+     art:`<div class="tm-timer"><div class="tm-ring"><span>87</span></div><div class="tm-notif"><b>Rest is up</b>Time for your next set.</div></div>`},
+    {k:'Adjust',h:'Make it fit today',p:'Machine taken? Swap the exercise for today, or add one. Tap S1 to mark a warm-up so it never counts toward PRs. Your saved plan stays the same.',
+     art:`<div class="tm-hdr"><b>Incline Dumbbell Press</b><span class="tm-pill">Swap</span><span class="tm-pill">✕</span></div>
+          <div class="tm-row"><span class="tm-num w">W</span><span class="tm-box" style="opacity:.6"><i>last 45</i>45</span><span class="tm-box" style="opacity:.6">10</span><span class="tm-chk on">${chk}</span></div>`},
+    {k:'Progress',h:'Watch yourself get stronger',p:'PRs are caught automatically, even rep PRs at a lighter weight. History has charts for every lift, and finishing a workout shows your summary.',
+     art:`<svg class="tm-spark" viewBox="0 0 200 44" preserveAspectRatio="none"><polyline points="0,38 30,34 60,35 90,26 120,22 150,16 180,10 200,6" fill="none" stroke="var(--red)" stroke-width="2.5" stroke-linejoin="round"/></svg>
+          <div class="tm-pr"><span>Barbell Bench Press</span><em>215 × 6</em></div><div class="tm-pr"><span>Barbell Squat</span><em>285 × 5</em></div>`},
+  ];
+}
+function showTour(){
+  const sl=tourSlides();
+  document.getElementById('tour-slides').innerHTML=sl.map(x=>`<div class="tour-slide"><div class="tour-art">${x.art}</div><div><div class="tour-kicker">${x.k}</div><div class="tour-h">${x.h}</div><p class="tour-p" style="margin-top:10px">${x.p}</p></div></div>`).join('');
+  document.getElementById('tour-dots').innerHTML=sl.map((_,i)=>`<span class="tour-dot" data-i="${i}"></span>`).join('');
+  tourGo(0);
+  document.getElementById('tour-ov').classList.add('open');
+  track('tour_start');
+}
+function tourGo(i){
+  const n=document.querySelectorAll('#tour-slides .tour-slide').length;
+  tourI=Math.max(0,Math.min(n-1,i));
+  document.getElementById('tour-slides').style.transform=`translateX(-${tourI*100}%)`;
+  document.querySelectorAll('#tour-dots .tour-dot').forEach((d,j)=>d.classList.toggle('on',j===tourI));
+  document.getElementById('tour-back').hidden=tourI===0;
+  document.getElementById('tour-next').textContent=tourI===n-1?'Let’s go':'Next';
+  document.getElementById('tour-skip').style.visibility=tourI===n-1?'hidden':'visible';
+}
+function tourNext(){const n=document.querySelectorAll('#tour-slides .tour-slide').length;if(tourI>=n-1)endTour('done');else tourGo(tourI+1);}
+function endTour(how){
+  document.getElementById('tour-ov').classList.remove('open');
+  if(!DB.settings().tourDone)DB.sset({...DB.settings(),tourDone:true});
+  track(how==='done'?'tour_complete':'tour_skip',{step:tourI+1});
+  renderToday();
+}
+// Brand-new accounts only: no workouts, no logs, never seen it
+function maybeShowTour(){if(!DB.settings().tourDone&&!Object.keys(DB.logs()).length&&!DB.workouts().length)showTour();}
+(()=>{const t=document.getElementById('tour-track');if(!t)return;
+  t.addEventListener('touchstart',e=>{tourX=e.touches[0].clientX;},{passive:true});
+  t.addEventListener('touchend',e=>{if(tourX==null)return;const dx=e.changedTouches[0].clientX-tourX;tourX=null;if(Math.abs(dx)>45)tourGo(tourI+(dx<0?1:-1));},{passive:true});
+})();
+document.addEventListener('keydown',e=>{if(!document.getElementById('tour-ov')?.classList.contains('open'))return;if(e.key==='ArrowRight')tourNext();if(e.key==='ArrowLeft')tourGo(tourI-1);if(e.key==='Escape')endTour('skip');});
 
 // ══ FINISH SCREEN ══
 let finData=null;
