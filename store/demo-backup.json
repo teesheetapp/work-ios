@@ -1,0 +1,5276 @@
+{
+ "version": 2,
+ "exportedAt": "2026-11-09T12:00:00.000Z",
+ "workouts": [
+  {
+   "id": "push",
+   "name": "Push",
+   "exercises": [
+    {
+     "id": "BarbellBenchPress",
+     "name": "Barbell Bench Press",
+     "type": "lift",
+     "restTime": 150,
+     "sets": [
+      {
+       "weight": "",
+       "reps": "6"
+      },
+      {
+       "weight": "",
+       "reps": "6"
+      },
+      {
+       "weight": "",
+       "reps": "6"
+      },
+      {
+       "weight": "",
+       "reps": "6"
+      }
+     ],
+     "notes": "",
+     "muscle": "",
+     "altName": ""
+    },
+    {
+     "id": "BarbellOverheadPress",
+     "name": "Barbell Overhead Press",
+     "type": "lift",
+     "restTime": 120,
+     "sets": [
+      {
+       "weight": "",
+       "reps": "8"
+      },
+      {
+       "weight": "",
+       "reps": "8"
+      },
+      {
+       "weight": "",
+       "reps": "8"
+      }
+     ],
+     "notes": "",
+     "muscle": "",
+     "altName": ""
+    },
+    {
+     "id": "InclineDumbbellPress",
+     "name": "Incline Dumbbell Press",
+     "type": "lift",
+     "restTime": 90,
+     "sets": [
+      {
+       "weight": "",
+       "reps": "10"
+      },
+      {
+       "weight": "",
+       "reps": "10"
+      },
+      {
+       "weight": "",
+       "reps": "10"
+      }
+     ],
+     "notes": "",
+     "muscle": "",
+     "altName": ""
+    },
+    {
+     "id": "LateralRaise",
+     "name": "Lateral Raise",
+     "type": "lift",
+     "restTime": 60,
+     "sets": [
+      {
+       "weight": "",
+       "reps": "15"
+      },
+      {
+       "weight": "",
+       "reps": "15"
+      },
+      {
+       "weight": "",
+       "reps": "15"
+      }
+     ],
+     "notes": "",
+     "muscle": "",
+     "altName": ""
+    },
+    {
+     "id": "TricepPushdown",
+     "name": "Tricep Pushdown",
+     "type": "lift",
+     "restTime": 60,
+     "sets": [
+      {
+       "weight": "",
+       "reps": "12"
+      },
+      {
+       "weight": "",
+       "reps": "12"
+      },
+      {
+       "weight": "",
+       "reps": "12"
+      }
+     ],
+     "notes": "",
+     "muscle": "",
+     "altName": ""
+    }
+   ]
+  },
+  {
+   "id": "pull",
+   "name": "Pull",
+   "exercises": [
+    {
+     "id": "Deadlift",
+     "name": "Deadlift",
+     "type": "lift",
+     "restTime": 180,
+     "sets": [
+      {
+       "weight": "",
+       "reps": "5"
+      },
+      {
+       "weight": "",
+       "reps": "5"
+      },
+      {
+       "weight": "",
+       "reps": "5"
+      }
+     ],
+     "notes": "",
+     "muscle": "",
+     "altName": ""
+    },
+    {
+     "id": "BarbellRow",
+     "name": "Barbell Row",
+     "type": "lift",
+     "restTime": 120,
+     "sets": [
+      {
+       "weight": "",
+       "reps": "8"
+      },
+      {
+       "weight": "",
+       "reps": "8"
+      },
+      {
+       "weight": "",
+       "reps": "8"
+      }
+     ],
+     "notes": "",
+     "muscle": "",
+     "altName": ""
+    },
+    {
+     "id": "LatPulldown",
+     "name": "Lat Pulldown",
+     "type": "lift",
+     "restTime": 90,
+     "sets": [
+      {
+       "weight": "",
+       "reps": "10"
+      },
+      {
+       "weight": "",
+       "reps": "10"
+      },
+      {
+       "weight": "",
+       "reps": "10"
+      }
+     ],
+     "notes": "",
+     "muscle": "",
+     "altName": ""
+    },
+    {
+     "id": "FacePull",
+     "name": "Face Pull",
+     "type": "lift",
+     "restTime": 60,
+     "sets": [
+      {
+       "weight": "",
+       "reps": "15"
+      },
+      {
+       "weight": "",
+       "reps": "15"
+      },
+      {
+       "weight": "",
+       "reps": "15"
+      }
+     ],
+     "notes": "",
+     "muscle": "",
+     "altName": ""
+    },
+    {
+     "id": "DumbbellCurl",
+     "name": "Dumbbell Curl",
+     "type": "lift",
+     "restTime": 60,
+     "sets": [
+      {
+       "weight": "",
+       "reps": "12"
+      },
+      {
+       "weight": "",
+       "reps": "12"
+      },
+      {
+       "weight": "",
+       "reps": "12"
+      }
+     ],
+     "notes": "",
+     "muscle": "",
+     "altName": ""
+    }
+   ]
+  },
+  {
+   "id": "legs",
+   "name": "Legs",
+   "exercises": [
+    {
+     "id": "BarbellSquat",
+     "name": "Barbell Squat",
+     "type": "lift",
+     "restTime": 150,
+     "sets": [
+      {
+       "weight": "",
+       "reps": "6"
+      },
+      {
+       "weight": "",
+       "reps": "6"
+      },
+      {
+       "weight": "",
+       "reps": "6"
+      },
+      {
+       "weight": "",
+       "reps": "6"
+      }
+     ],
+     "notes": "",
+     "muscle": "",
+     "altName": ""
+    },
+    {
+     "id": "RomanianDeadlift",
+     "name": "Romanian Deadlift",
+     "type": "lift",
+     "restTime": 120,
+     "sets": [
+      {
+       "weight": "",
+       "reps": "8"
+      },
+      {
+       "weight": "",
+       "reps": "8"
+      },
+      {
+       "weight": "",
+       "reps": "8"
+      }
+     ],
+     "notes": "",
+     "muscle": "",
+     "altName": ""
+    },
+    {
+     "id": "LegPress",
+     "name": "Leg Press",
+     "type": "lift",
+     "restTime": 90,
+     "sets": [
+      {
+       "weight": "",
+       "reps": "10"
+      },
+      {
+       "weight": "",
+       "reps": "10"
+      },
+      {
+       "weight": "",
+       "reps": "10"
+      }
+     ],
+     "notes": "",
+     "muscle": "",
+     "altName": ""
+    },
+    {
+     "id": "LegCurl",
+     "name": "Leg Curl",
+     "type": "lift",
+     "restTime": 60,
+     "sets": [
+      {
+       "weight": "",
+       "reps": "12"
+      },
+      {
+       "weight": "",
+       "reps": "12"
+      },
+      {
+       "weight": "",
+       "reps": "12"
+      }
+     ],
+     "notes": "",
+     "muscle": "",
+     "altName": ""
+    },
+    {
+     "id": "CalfRaiseStanding",
+     "name": "Calf Raise (Standing)",
+     "type": "lift",
+     "restTime": 60,
+     "sets": [
+      {
+       "weight": "",
+       "reps": "15"
+      },
+      {
+       "weight": "",
+       "reps": "15"
+      },
+      {
+       "weight": "",
+       "reps": "15"
+      }
+     ],
+     "notes": "",
+     "muscle": "",
+     "altName": ""
+    }
+   ]
+  }
+ ],
+ "phases": [
+  {
+   "id": "ph",
+   "name": "Push / Pull / Legs",
+   "weeks": 12,
+   "daysPerWeek": 3,
+   "startDate": "2026-08-31",
+   "schedule": [
+    {
+     "day": 1,
+     "workoutId": "push"
+    },
+    {
+     "day": 3,
+     "workoutId": "pull"
+    },
+    {
+     "day": 5,
+     "workoutId": "legs"
+    }
+   ]
+  }
+ ],
+ "logs": {
+  "2026-08-31": {
+   "workoutId": "push",
+   "workoutName": "Push",
+   "savedAt": "2026-08-31T16:00:00.000Z",
+   "exercises": [
+    {
+     "name": "Barbell Bench Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "165",
+       "reps": "6",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "165",
+       "reps": "6",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "165",
+       "reps": "6",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "165",
+       "reps": "6",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Barbell Overhead Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "95",
+       "reps": "8",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "95",
+       "reps": "8",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "95",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Incline Dumbbell Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "55",
+       "reps": "10",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "55",
+       "reps": "10",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "55",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Lateral Raise",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "15",
+       "reps": "15",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "15",
+       "reps": "15",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "15",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Tricep Pushdown",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "45",
+       "reps": "12",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "45",
+       "reps": "12",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "45",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    }
+   ]
+  },
+  "2026-09-02": {
+   "workoutId": "pull",
+   "workoutName": "Pull",
+   "savedAt": "2026-09-02T16:00:00.000Z",
+   "exercises": [
+    {
+     "name": "Deadlift",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "275",
+       "reps": "5",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "275",
+       "reps": "5",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "275",
+       "reps": "5",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Barbell Row",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "135",
+       "reps": "8",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "135",
+       "reps": "8",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "135",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Lat Pulldown",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "120",
+       "reps": "10",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "120",
+       "reps": "10",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "120",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Face Pull",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "35",
+       "reps": "15",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "35",
+       "reps": "15",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "35",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Dumbbell Curl",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "25",
+       "reps": "12",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "25",
+       "reps": "12",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "25",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    }
+   ]
+  },
+  "2026-09-04": {
+   "workoutId": "legs",
+   "workoutName": "Legs",
+   "savedAt": "2026-09-04T16:00:00.000Z",
+   "exercises": [
+    {
+     "name": "Barbell Squat",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "215",
+       "reps": "6",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "215",
+       "reps": "6",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "215",
+       "reps": "6",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "215",
+       "reps": "6",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Romanian Deadlift",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "165",
+       "reps": "8",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "165",
+       "reps": "8",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "165",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Leg Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "270",
+       "reps": "10",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "270",
+       "reps": "10",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "270",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Leg Curl",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "70",
+       "reps": "12",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "70",
+       "reps": "12",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "70",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Calf Raise (Standing)",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "135",
+       "reps": "15",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "135",
+       "reps": "15",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "135",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    }
+   ]
+  },
+  "2026-09-07": {
+   "workoutId": "push",
+   "workoutName": "Push",
+   "savedAt": "2026-09-07T16:00:00.000Z",
+   "exercises": [
+    {
+     "name": "Barbell Bench Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "165",
+       "reps": "6",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "165",
+       "reps": "6",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "165",
+       "reps": "6",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "165",
+       "reps": "6",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Barbell Overhead Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "95",
+       "reps": "8",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "95",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "95",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Incline Dumbbell Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "55",
+       "reps": "10",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "55",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "55",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Lateral Raise",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "15",
+       "reps": "15",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "15",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "15",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Tricep Pushdown",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "45",
+       "reps": "12",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "45",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "45",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    }
+   ]
+  },
+  "2026-09-09": {
+   "workoutId": "pull",
+   "workoutName": "Pull",
+   "savedAt": "2026-09-09T16:00:00.000Z",
+   "exercises": [
+    {
+     "name": "Deadlift",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "275",
+       "reps": "5",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "275",
+       "reps": "5",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "275",
+       "reps": "5",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Barbell Row",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "135",
+       "reps": "8",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "135",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "135",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Lat Pulldown",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "120",
+       "reps": "10",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "120",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "120",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Face Pull",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "35",
+       "reps": "15",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "35",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "35",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Dumbbell Curl",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "25",
+       "reps": "12",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "25",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "25",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    }
+   ]
+  },
+  "2026-09-11": {
+   "workoutId": "legs",
+   "workoutName": "Legs",
+   "savedAt": "2026-09-11T16:00:00.000Z",
+   "exercises": [
+    {
+     "name": "Barbell Squat",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "215",
+       "reps": "6",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "215",
+       "reps": "6",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "215",
+       "reps": "6",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "215",
+       "reps": "6",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Romanian Deadlift",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "165",
+       "reps": "8",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "165",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "165",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Leg Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "270",
+       "reps": "10",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "270",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "270",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Leg Curl",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "70",
+       "reps": "12",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "70",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "70",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Calf Raise (Standing)",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "135",
+       "reps": "15",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "135",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "135",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    }
+   ]
+  },
+  "2026-09-14": {
+   "workoutId": "push",
+   "workoutName": "Push",
+   "savedAt": "2026-09-14T16:00:00.000Z",
+   "exercises": [
+    {
+     "name": "Barbell Bench Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "170",
+       "reps": "6",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "170",
+       "reps": "6",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "170",
+       "reps": "6",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "170",
+       "reps": "5",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Barbell Overhead Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "100",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "100",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "100",
+       "reps": "7",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Incline Dumbbell Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "57.5",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "57.5",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "57.5",
+       "reps": "9",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Lateral Raise",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "17.5",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "17.5",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "17.5",
+       "reps": "14",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Tricep Pushdown",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "47.5",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "47.5",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "47.5",
+       "reps": "11",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    }
+   ]
+  },
+  "2026-09-16": {
+   "workoutId": "pull",
+   "workoutName": "Pull",
+   "savedAt": "2026-09-16T16:00:00.000Z",
+   "exercises": [
+    {
+     "name": "Deadlift",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "285",
+       "reps": "5",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "285",
+       "reps": "5",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "285",
+       "reps": "4",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Barbell Row",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "140",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "140",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "140",
+       "reps": "7",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Lat Pulldown",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "125",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "125",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "125",
+       "reps": "9",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Face Pull",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "37.5",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "37.5",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "37.5",
+       "reps": "14",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Dumbbell Curl",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "27.5",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "27.5",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "27.5",
+       "reps": "11",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    }
+   ]
+  },
+  "2026-09-18": {
+   "workoutId": "legs",
+   "workoutName": "Legs",
+   "savedAt": "2026-09-18T16:00:00.000Z",
+   "exercises": [
+    {
+     "name": "Barbell Squat",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "225",
+       "reps": "6",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "225",
+       "reps": "6",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "225",
+       "reps": "6",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "225",
+       "reps": "5",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Romanian Deadlift",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "175",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "175",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "175",
+       "reps": "7",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Leg Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "280",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "280",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "280",
+       "reps": "9",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Leg Curl",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "72.5",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "72.5",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "72.5",
+       "reps": "11",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Calf Raise (Standing)",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "137.5",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "137.5",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "137.5",
+       "reps": "14",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    }
+   ]
+  },
+  "2026-09-21": {
+   "workoutId": "push",
+   "workoutName": "Push",
+   "savedAt": "2026-09-21T16:00:00.000Z",
+   "exercises": [
+    {
+     "name": "Barbell Bench Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "175",
+       "reps": "6",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "175",
+       "reps": "6",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "175",
+       "reps": "6",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "175",
+       "reps": "6",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Barbell Overhead Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "105",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "105",
+       "reps": "8",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "105",
+       "reps": "8",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Incline Dumbbell Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "60",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "60",
+       "reps": "10",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "60",
+       "reps": "10",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Lateral Raise",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "20",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "20",
+       "reps": "15",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "20",
+       "reps": "15",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Tricep Pushdown",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "50",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "50",
+       "reps": "12",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "50",
+       "reps": "12",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      }
+     ]
+    }
+   ]
+  },
+  "2026-09-23": {
+   "workoutId": "pull",
+   "workoutName": "Pull",
+   "savedAt": "2026-09-23T16:00:00.000Z",
+   "exercises": [
+    {
+     "name": "Deadlift",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "295",
+       "reps": "5",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "295",
+       "reps": "5",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "295",
+       "reps": "5",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Barbell Row",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "145",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "145",
+       "reps": "8",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "145",
+       "reps": "8",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Lat Pulldown",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "130",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "130",
+       "reps": "10",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "130",
+       "reps": "10",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Face Pull",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "40",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "40",
+       "reps": "15",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "40",
+       "reps": "15",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Dumbbell Curl",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "30",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "30",
+       "reps": "12",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "30",
+       "reps": "12",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      }
+     ]
+    }
+   ]
+  },
+  "2026-09-25": {
+   "workoutId": "legs",
+   "workoutName": "Legs",
+   "savedAt": "2026-09-25T16:00:00.000Z",
+   "exercises": [
+    {
+     "name": "Barbell Squat",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "235",
+       "reps": "6",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "235",
+       "reps": "6",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "235",
+       "reps": "6",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "235",
+       "reps": "6",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Romanian Deadlift",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "185",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "185",
+       "reps": "8",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "185",
+       "reps": "8",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Leg Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "290",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "290",
+       "reps": "10",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "290",
+       "reps": "10",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Leg Curl",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "75",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "75",
+       "reps": "12",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "75",
+       "reps": "12",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Calf Raise (Standing)",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "140",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "140",
+       "reps": "15",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "140",
+       "reps": "15",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      }
+     ]
+    }
+   ]
+  },
+  "2026-09-28": {
+   "workoutId": "push",
+   "workoutName": "Push",
+   "savedAt": "2026-09-28T16:00:00.000Z",
+   "exercises": [
+    {
+     "name": "Barbell Bench Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "180",
+       "reps": "6",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "180",
+       "reps": "6",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "180",
+       "reps": "6",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "180",
+       "reps": "6",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Barbell Overhead Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "110",
+       "reps": "8",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "110",
+       "reps": "8",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "110",
+       "reps": "8",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Incline Dumbbell Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "62.5",
+       "reps": "10",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "62.5",
+       "reps": "10",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "62.5",
+       "reps": "10",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Lateral Raise",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "22.5",
+       "reps": "15",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "22.5",
+       "reps": "15",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "22.5",
+       "reps": "15",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Tricep Pushdown",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "52.5",
+       "reps": "12",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "52.5",
+       "reps": "12",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "52.5",
+       "reps": "12",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      }
+     ]
+    }
+   ]
+  },
+  "2026-09-30": {
+   "workoutId": "pull",
+   "workoutName": "Pull",
+   "savedAt": "2026-09-30T16:00:00.000Z",
+   "exercises": [
+    {
+     "name": "Deadlift",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "305",
+       "reps": "5",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "305",
+       "reps": "5",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "305",
+       "reps": "5",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Barbell Row",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "150",
+       "reps": "8",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "150",
+       "reps": "8",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "150",
+       "reps": "8",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Lat Pulldown",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "135",
+       "reps": "10",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "135",
+       "reps": "10",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "135",
+       "reps": "10",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Face Pull",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "42.5",
+       "reps": "15",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "42.5",
+       "reps": "15",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "42.5",
+       "reps": "15",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Dumbbell Curl",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "32.5",
+       "reps": "12",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "32.5",
+       "reps": "12",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "32.5",
+       "reps": "12",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      }
+     ]
+    }
+   ]
+  },
+  "2026-10-02": {
+   "workoutId": "legs",
+   "workoutName": "Legs",
+   "savedAt": "2026-10-02T16:00:00.000Z",
+   "exercises": [
+    {
+     "name": "Barbell Squat",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "245",
+       "reps": "6",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "245",
+       "reps": "6",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "245",
+       "reps": "6",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "245",
+       "reps": "6",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Romanian Deadlift",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "195",
+       "reps": "8",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "195",
+       "reps": "8",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "195",
+       "reps": "8",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Leg Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "300",
+       "reps": "10",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "300",
+       "reps": "10",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "300",
+       "reps": "10",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Leg Curl",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "77.5",
+       "reps": "12",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "77.5",
+       "reps": "12",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "77.5",
+       "reps": "12",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Calf Raise (Standing)",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "142.5",
+       "reps": "15",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "142.5",
+       "reps": "15",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "142.5",
+       "reps": "15",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      }
+     ]
+    }
+   ]
+  },
+  "2026-10-05": {
+   "workoutId": "push",
+   "workoutName": "Push",
+   "savedAt": "2026-10-05T16:00:00.000Z",
+   "exercises": [
+    {
+     "name": "Barbell Bench Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "185",
+       "reps": "6",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "185",
+       "reps": "6",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "185",
+       "reps": "6",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "185",
+       "reps": "5",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Barbell Overhead Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "115",
+       "reps": "8",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "115",
+       "reps": "8",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "115",
+       "reps": "7",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Incline Dumbbell Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "65",
+       "reps": "10",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "65",
+       "reps": "10",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "65",
+       "reps": "9",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Lateral Raise",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "25",
+       "reps": "15",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "25",
+       "reps": "15",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "25",
+       "reps": "14",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Tricep Pushdown",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "55",
+       "reps": "12",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "55",
+       "reps": "12",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "55",
+       "reps": "11",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    }
+   ]
+  },
+  "2026-10-07": {
+   "workoutId": "pull",
+   "workoutName": "Pull",
+   "savedAt": "2026-10-07T16:00:00.000Z",
+   "exercises": [
+    {
+     "name": "Deadlift",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "315",
+       "reps": "5",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "315",
+       "reps": "5",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "315",
+       "reps": "4",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Barbell Row",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "155",
+       "reps": "8",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "155",
+       "reps": "8",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "155",
+       "reps": "7",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Lat Pulldown",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "140",
+       "reps": "10",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "140",
+       "reps": "10",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "140",
+       "reps": "9",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Face Pull",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "45",
+       "reps": "15",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "45",
+       "reps": "15",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "45",
+       "reps": "14",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Dumbbell Curl",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "35",
+       "reps": "12",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "35",
+       "reps": "12",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "35",
+       "reps": "11",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    }
+   ]
+  },
+  "2026-10-09": {
+   "workoutId": "legs",
+   "workoutName": "Legs",
+   "savedAt": "2026-10-09T16:00:00.000Z",
+   "exercises": [
+    {
+     "name": "Barbell Squat",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "255",
+       "reps": "6",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "255",
+       "reps": "6",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "255",
+       "reps": "6",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "255",
+       "reps": "5",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Romanian Deadlift",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "205",
+       "reps": "8",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "205",
+       "reps": "8",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "205",
+       "reps": "7",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Leg Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "310",
+       "reps": "10",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "310",
+       "reps": "10",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "310",
+       "reps": "9",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Leg Curl",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "80",
+       "reps": "12",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "80",
+       "reps": "12",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "80",
+       "reps": "11",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Calf Raise (Standing)",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "145",
+       "reps": "15",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "145",
+       "reps": "15",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "145",
+       "reps": "14",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    }
+   ]
+  },
+  "2026-10-12": {
+   "workoutId": "push",
+   "workoutName": "Push",
+   "savedAt": "2026-10-12T16:00:00.000Z",
+   "exercises": [
+    {
+     "name": "Barbell Bench Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "185",
+       "reps": "6",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "185",
+       "reps": "6",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "185",
+       "reps": "6",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "185",
+       "reps": "6",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Barbell Overhead Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "115",
+       "reps": "8",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "115",
+       "reps": "8",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "115",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Incline Dumbbell Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "65",
+       "reps": "10",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "65",
+       "reps": "10",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "65",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Lateral Raise",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "25",
+       "reps": "15",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "25",
+       "reps": "15",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "25",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Tricep Pushdown",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "55",
+       "reps": "12",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "55",
+       "reps": "12",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "55",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    }
+   ]
+  },
+  "2026-10-14": {
+   "workoutId": "pull",
+   "workoutName": "Pull",
+   "savedAt": "2026-10-14T16:00:00.000Z",
+   "exercises": [
+    {
+     "name": "Deadlift",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "315",
+       "reps": "5",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "315",
+       "reps": "5",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "315",
+       "reps": "5",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Barbell Row",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "155",
+       "reps": "8",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "155",
+       "reps": "8",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "155",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Lat Pulldown",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "140",
+       "reps": "10",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "140",
+       "reps": "10",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "140",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Face Pull",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "45",
+       "reps": "15",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "45",
+       "reps": "15",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "45",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Dumbbell Curl",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "35",
+       "reps": "12",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "35",
+       "reps": "12",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "35",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    }
+   ]
+  },
+  "2026-10-16": {
+   "workoutId": "legs",
+   "workoutName": "Legs",
+   "savedAt": "2026-10-16T16:00:00.000Z",
+   "exercises": [
+    {
+     "name": "Barbell Squat",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "255",
+       "reps": "6",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "255",
+       "reps": "6",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "255",
+       "reps": "6",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "255",
+       "reps": "6",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Romanian Deadlift",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "205",
+       "reps": "8",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "205",
+       "reps": "8",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "205",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Leg Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "310",
+       "reps": "10",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "310",
+       "reps": "10",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "310",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Leg Curl",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "80",
+       "reps": "12",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "80",
+       "reps": "12",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "80",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Calf Raise (Standing)",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "145",
+       "reps": "15",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "145",
+       "reps": "15",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "145",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    }
+   ]
+  },
+  "2026-10-19": {
+   "workoutId": "push",
+   "workoutName": "Push",
+   "savedAt": "2026-10-19T16:00:00.000Z",
+   "exercises": [
+    {
+     "name": "Barbell Bench Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "190",
+       "reps": "6",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "190",
+       "reps": "6",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "190",
+       "reps": "6",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "190",
+       "reps": "6",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Barbell Overhead Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "120",
+       "reps": "8",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "120",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "120",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Incline Dumbbell Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "67.5",
+       "reps": "10",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "67.5",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "67.5",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Lateral Raise",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "27.5",
+       "reps": "15",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "27.5",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "27.5",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Tricep Pushdown",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "57.5",
+       "reps": "12",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "57.5",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "57.5",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    }
+   ]
+  },
+  "2026-10-21": {
+   "workoutId": "pull",
+   "workoutName": "Pull",
+   "savedAt": "2026-10-21T16:00:00.000Z",
+   "exercises": [
+    {
+     "name": "Deadlift",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "325",
+       "reps": "5",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "325",
+       "reps": "5",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "325",
+       "reps": "5",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Barbell Row",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "160",
+       "reps": "8",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "160",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "160",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Lat Pulldown",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "145",
+       "reps": "10",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "145",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "145",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Face Pull",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "47.5",
+       "reps": "15",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "47.5",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "47.5",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Dumbbell Curl",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "37.5",
+       "reps": "12",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "37.5",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "37.5",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    }
+   ]
+  },
+  "2026-10-23": {
+   "workoutId": "legs",
+   "workoutName": "Legs",
+   "savedAt": "2026-10-23T16:00:00.000Z",
+   "exercises": [
+    {
+     "name": "Barbell Squat",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "265",
+       "reps": "6",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "265",
+       "reps": "6",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "265",
+       "reps": "6",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "265",
+       "reps": "6",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Romanian Deadlift",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "215",
+       "reps": "8",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "215",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "215",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Leg Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "320",
+       "reps": "10",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "320",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "320",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Leg Curl",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "82.5",
+       "reps": "12",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "82.5",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "82.5",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Calf Raise (Standing)",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "147.5",
+       "reps": "15",
+       "rpe": "7.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "147.5",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "147.5",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      }
+     ]
+    }
+   ]
+  },
+  "2026-10-26": {
+   "workoutId": "push",
+   "workoutName": "Push",
+   "savedAt": "2026-10-26T16:00:00.000Z",
+   "exercises": [
+    {
+     "name": "Barbell Bench Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "195",
+       "reps": "6",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "195",
+       "reps": "6",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "195",
+       "reps": "6",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "195",
+       "reps": "5",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Barbell Overhead Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "125",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "125",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "125",
+       "reps": "7",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Incline Dumbbell Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "70",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "70",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "70",
+       "reps": "9",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Lateral Raise",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "30",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "30",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "30",
+       "reps": "14",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Tricep Pushdown",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "60",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "60",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "60",
+       "reps": "11",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    }
+   ]
+  },
+  "2026-10-28": {
+   "workoutId": "pull",
+   "workoutName": "Pull",
+   "savedAt": "2026-10-28T16:00:00.000Z",
+   "exercises": [
+    {
+     "name": "Deadlift",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "335",
+       "reps": "5",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "335",
+       "reps": "5",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "335",
+       "reps": "4",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Barbell Row",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "165",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "165",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "165",
+       "reps": "7",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Lat Pulldown",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "150",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "150",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "150",
+       "reps": "9",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Face Pull",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "50",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "50",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "50",
+       "reps": "14",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Dumbbell Curl",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "40",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "40",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "40",
+       "reps": "11",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    }
+   ]
+  },
+  "2026-10-30": {
+   "workoutId": "legs",
+   "workoutName": "Legs",
+   "savedAt": "2026-10-30T16:00:00.000Z",
+   "exercises": [
+    {
+     "name": "Barbell Squat",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "275",
+       "reps": "6",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "275",
+       "reps": "6",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "275",
+       "reps": "6",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "275",
+       "reps": "5",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Romanian Deadlift",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "225",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "225",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "225",
+       "reps": "7",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Leg Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "330",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "330",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "330",
+       "reps": "9",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Leg Curl",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "85",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "85",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "85",
+       "reps": "11",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Calf Raise (Standing)",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "150",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "150",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "150",
+       "reps": "14",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      }
+     ]
+    }
+   ]
+  },
+  "2026-11-02": {
+   "workoutId": "push",
+   "workoutName": "Push",
+   "savedAt": "2026-11-02T17:00:00.000Z",
+   "exercises": [
+    {
+     "name": "Barbell Bench Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "200",
+       "reps": "6",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "200",
+       "reps": "6",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "200",
+       "reps": "6",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "200",
+       "reps": "6",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Barbell Overhead Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "130",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "130",
+       "reps": "8",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "130",
+       "reps": "8",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Incline Dumbbell Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "72.5",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "72.5",
+       "reps": "10",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "72.5",
+       "reps": "10",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Lateral Raise",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "32.5",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "32.5",
+       "reps": "15",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "32.5",
+       "reps": "15",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Tricep Pushdown",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "62.5",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "62.5",
+       "reps": "12",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "62.5",
+       "reps": "12",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      }
+     ]
+    }
+   ]
+  },
+  "2026-11-04": {
+   "workoutId": "pull",
+   "workoutName": "Pull",
+   "savedAt": "2026-11-04T17:00:00.000Z",
+   "exercises": [
+    {
+     "name": "Deadlift",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "345",
+       "reps": "5",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "345",
+       "reps": "5",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "345",
+       "reps": "5",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Barbell Row",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "170",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "170",
+       "reps": "8",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "170",
+       "reps": "8",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Lat Pulldown",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "155",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "155",
+       "reps": "10",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "155",
+       "reps": "10",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Face Pull",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "52.5",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "52.5",
+       "reps": "15",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "52.5",
+       "reps": "15",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Dumbbell Curl",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "42.5",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "42.5",
+       "reps": "12",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "42.5",
+       "reps": "12",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      }
+     ]
+    }
+   ]
+  },
+  "2026-11-06": {
+   "workoutId": "legs",
+   "workoutName": "Legs",
+   "savedAt": "2026-11-06T17:00:00.000Z",
+   "exercises": [
+    {
+     "name": "Barbell Squat",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "285",
+       "reps": "6",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "285",
+       "reps": "6",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "285",
+       "reps": "6",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "285",
+       "reps": "6",
+       "rpe": "7",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Romanian Deadlift",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "235",
+       "reps": "8",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "235",
+       "reps": "8",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "235",
+       "reps": "8",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Leg Press",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "340",
+       "reps": "10",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "340",
+       "reps": "10",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "340",
+       "reps": "10",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Leg Curl",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "87.5",
+       "reps": "12",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "87.5",
+       "reps": "12",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "87.5",
+       "reps": "12",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      }
+     ]
+    },
+    {
+     "name": "Calf Raise (Standing)",
+     "isBW": false,
+     "muscle": "",
+     "notes": "",
+     "sets": [
+      {
+       "weight": "152.5",
+       "reps": "15",
+       "rpe": "8",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "152.5",
+       "reps": "15",
+       "rpe": "8.5",
+       "done": true,
+       "pr": false
+      },
+      {
+       "weight": "152.5",
+       "reps": "15",
+       "rpe": "9",
+       "done": true,
+       "pr": false
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "prs": {
+  "Barbell Bench Press": {
+   "weight": "200",
+   "reps": "6",
+   "date": "2026-11-02",
+   "workoutName": "Push",
+   "e1rm": "240.0"
+  },
+  "Barbell Overhead Press": {
+   "weight": "130",
+   "reps": "8",
+   "date": "2026-11-02",
+   "workoutName": "Push",
+   "e1rm": "164.7"
+  },
+  "Incline Dumbbell Press": {
+   "weight": "72.5",
+   "reps": "10",
+   "date": "2026-11-02",
+   "workoutName": "Push",
+   "e1rm": "96.7"
+  },
+  "Lateral Raise": {
+   "weight": "32.5",
+   "reps": "15",
+   "date": "2026-11-02",
+   "workoutName": "Push",
+   "e1rm": "48.8"
+  },
+  "Tricep Pushdown": {
+   "weight": "62.5",
+   "reps": "12",
+   "date": "2026-11-02",
+   "workoutName": "Push",
+   "e1rm": "87.5"
+  },
+  "Deadlift": {
+   "weight": "345",
+   "reps": "5",
+   "date": "2026-11-04",
+   "workoutName": "Pull",
+   "e1rm": "402.5"
+  },
+  "Barbell Row": {
+   "weight": "170",
+   "reps": "8",
+   "date": "2026-11-04",
+   "workoutName": "Pull",
+   "e1rm": "215.3"
+  },
+  "Lat Pulldown": {
+   "weight": "155",
+   "reps": "10",
+   "date": "2026-11-04",
+   "workoutName": "Pull",
+   "e1rm": "206.7"
+  },
+  "Face Pull": {
+   "weight": "52.5",
+   "reps": "15",
+   "date": "2026-11-04",
+   "workoutName": "Pull",
+   "e1rm": "78.8"
+  },
+  "Dumbbell Curl": {
+   "weight": "42.5",
+   "reps": "12",
+   "date": "2026-11-04",
+   "workoutName": "Pull",
+   "e1rm": "59.5"
+  },
+  "Barbell Squat": {
+   "weight": "285",
+   "reps": "6",
+   "date": "2026-11-06",
+   "workoutName": "Legs",
+   "e1rm": "342.0"
+  },
+  "Romanian Deadlift": {
+   "weight": "235",
+   "reps": "8",
+   "date": "2026-11-06",
+   "workoutName": "Legs",
+   "e1rm": "297.7"
+  },
+  "Leg Press": {
+   "weight": "340",
+   "reps": "10",
+   "date": "2026-11-06",
+   "workoutName": "Legs",
+   "e1rm": "453.3"
+  },
+  "Leg Curl": {
+   "weight": "87.5",
+   "reps": "12",
+   "date": "2026-11-06",
+   "workoutName": "Legs",
+   "e1rm": "122.5"
+  },
+  "Calf Raise (Standing)": {
+   "weight": "152.5",
+   "reps": "15",
+   "date": "2026-11-06",
+   "workoutName": "Legs",
+   "e1rm": "228.8"
+  }
+ },
+ "activePhase": "ph",
+ "bw": {
+  "2026-09-10": 188.6,
+  "2026-09-11": 188.8,
+  "2026-09-12": 188.9,
+  "2026-09-13": 188.9,
+  "2026-09-14": 188.9,
+  "2026-09-15": 188.7,
+  "2026-09-16": 188.5,
+  "2026-09-17": 188.2,
+  "2026-09-18": 188,
+  "2026-09-19": 187.7,
+  "2026-09-20": 187.5,
+  "2026-09-21": 187.4,
+  "2026-09-22": 187.4,
+  "2026-09-23": 187.5,
+  "2026-09-24": 187.7,
+  "2026-09-25": 187.8,
+  "2026-09-26": 188,
+  "2026-09-27": 188,
+  "2026-09-28": 188,
+  "2026-09-29": 187.9,
+  "2026-09-30": 187.7,
+  "2026-10-01": 187.5,
+  "2026-10-02": 187.2,
+  "2026-10-03": 186.9,
+  "2026-10-04": 186.7,
+  "2026-10-05": 186.6,
+  "2026-10-06": 186.6,
+  "2026-10-07": 186.6,
+  "2026-10-08": 186.7,
+  "2026-10-09": 186.9,
+  "2026-10-10": 187,
+  "2026-10-11": 187.1,
+  "2026-10-12": 187.2,
+  "2026-10-13": 187.1,
+  "2026-10-14": 187,
+  "2026-10-15": 186.7,
+  "2026-10-16": 186.5,
+  "2026-10-17": 186.2,
+  "2026-10-18": 186,
+  "2026-10-19": 185.8,
+  "2026-10-20": 185.7,
+  "2026-10-21": 185.7,
+  "2026-10-22": 185.8,
+  "2026-10-23": 185.9,
+  "2026-10-24": 186.1,
+  "2026-10-25": 186.2,
+  "2026-10-26": 186.3,
+  "2026-10-27": 186.3,
+  "2026-10-28": 186.2,
+  "2026-10-29": 186,
+  "2026-10-30": 185.7,
+  "2026-10-31": 185.4,
+  "2026-11-01": 185.2,
+  "2026-11-02": 185,
+  "2026-11-03": 184.9,
+  "2026-11-04": 184.8,
+  "2026-11-05": 184.9,
+  "2026-11-06": 185,
+  "2026-11-07": 185.2,
+  "2026-11-08": 185.3
+ },
+ "manualRest": [],
+ "settings": {
+  "unit": "lb"
+ }
+}

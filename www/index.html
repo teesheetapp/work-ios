@@ -81,12 +81,12 @@ label{font-size:0.65rem;color:var(--muted2);letter-spacing:.8px;text-transform:u
 
 /* TAGS */
 .tag{display:inline-flex;align-items:center;padding:2px 7px;border-radius:4px;font-size:0.62rem;font-weight:700;letter-spacing:.6px;text-transform:uppercase;gap:3px}
-.tag-red{background:var(--redg);color:var(--red);border:1px solid rgba(212,43,43,.2)}
-.tag-blue{background:var(--blueg);color:var(--blue);border:1px solid rgba(74,143,212,.2)}
-.tag-green{background:var(--greeng);color:var(--green);border:1px solid rgba(45,212,160,.2)}
+.tag-red{background:var(--redg);color:var(--red);border:1px solid rgba(230,235,240,.18)}
+.tag-blue{background:var(--blueg);color:var(--blue);border:1px solid rgba(143,166,189,.2)}
+.tag-green{background:var(--greeng);color:var(--green);border:1px solid rgba(127,209,185,.2)}
 .tag-purple{background:var(--purpleg);color:var(--purple);border:1px solid rgba(155,127,232,.2)}
-.tag-muted{background:rgba(74,98,128,.15);color:var(--muted2);border:1px solid var(--b0)}
-.tag-orange{background:var(--orangeg);color:var(--orange);border:1px solid rgba(245,158,11,.2)}
+.tag-muted{background:rgba(124,134,146,.12);color:var(--muted2);border:1px solid var(--b0)}
+.tag-orange{background:var(--orangeg);color:var(--orange);border:1px solid rgba(232,194,122,.2)}
 
 /* DIVIDER */
 .div{border:none;border-top:1px solid var(--b0);margin:14px 0}
@@ -196,7 +196,7 @@ label{font-size:0.65rem;color:var(--muted2);letter-spacing:.8px;text-transform:u
 .workout-name-input:focus{outline:none;border-bottom-color:var(--red);background:transparent}
 .ex-card{background:var(--s2);border:1px solid var(--b0);border-radius:var(--r);margin-bottom:10px;overflow:hidden;transition:border-color .2s,box-shadow .2s}
 .ex-card.dragging{opacity:.4;border-style:dashed}
-.ex-card.drag-over{border-color:var(--blue);box-shadow:0 0 0 2px rgba(74,143,212,.2)}
+.ex-card.drag-over{border-color:var(--blue);box-shadow:0 0 0 2px rgba(143,166,189,.2)}
 .ex-card.type-run{border-color:rgba(155,127,232,.35)}
 .ex-card.type-bw{border-color:rgba(45,212,160,.25)}
 .alt-toggle-btn{background:var(--s3);border:1px solid var(--b1);color:var(--muted2);border-radius:6px;padding:6px 10px;font-size:0.68rem;font-weight:600;cursor:pointer;white-space:nowrap;font-family:'Manrope',sans-serif;flex-shrink:0;transition:all .15s}
@@ -263,7 +263,7 @@ label{font-size:0.65rem;color:var(--muted2);letter-spacing:.8px;text-transform:u
 .day-cell.today{border-color:var(--red);background:rgba(212,43,43,.06)}
 .day-cell.rest{opacity:.28;cursor:default}
 .day-cell.future{opacity:.5}
-.day-cell.manual-rest{opacity:.4;background:rgba(245,158,11,.04);border-color:rgba(245,158,11,.3)}
+.day-cell.manual-rest{opacity:.4;background:rgba(245,158,11,.04);border-color:rgba(232,194,122,.3)}
 .day-cell.logged{border-color:var(--green);background:rgba(45,212,160,.05)}
 .day-nm{font-size:0.52rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase;font-weight:700}
 .day-n{font-family:'Saira Semi Condensed',sans-serif;font-size:1.35rem;font-weight:700;line-height:1;color:var(--text)}
@@ -280,7 +280,7 @@ label{font-size:0.65rem;color:var(--muted2);letter-spacing:.8px;text-transform:u
 .month-cell.today{border-color:var(--red);background:rgba(212,43,43,.06)}
 .month-cell.logged{border-color:var(--green);background:rgba(45,212,160,.05)}
 .month-cell.rest-day{opacity:.3}
-.month-cell.manual-rest-day{opacity:.45;border-color:rgba(245,158,11,.3)}
+.month-cell.manual-rest-day{opacity:.45;border-color:rgba(232,194,122,.3)}
 .month-n{font-family:'Saira Semi Condensed',sans-serif;font-size:1rem;font-weight:700;line-height:1;color:var(--text2)}
 .month-cell.today .month-n{color:var(--red)}
 .month-wlbl{font-size:0.5rem;color:var(--blue);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -336,7 +336,7 @@ label{font-size:0.65rem;color:var(--muted2);letter-spacing:.8px;text-transform:u
 .chk.on{background:var(--green);border-color:var(--green)}
 .chk svg{width:18px;height:18px;stroke:#07101f;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;display:none}
 .chk.on svg{display:block}
-.pr-badge{font-size:0.58rem;font-weight:700;color:var(--red);background:var(--redg);padding:1px 5px;border-radius:3px;border:1px solid rgba(212,43,43,.2)}
+.pr-badge{font-size:0.58rem;font-weight:700;color:var(--red);background:var(--redg);padding:1px 5px;border-radius:3px;border:1px solid rgba(230,235,240,.18)}
 .log-run-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:8px}
 .log-pr-hint{font-size:0.68rem;color:var(--muted2);padding:3px 0 7px;display:flex;align-items:center;gap:5px}
 /* Last session comparison row */
@@ -358,13 +358,13 @@ label{font-size:0.65rem;color:var(--muted2);letter-spacing:.8px;text-transform:u
 
 /* ═══ PHASES ═══ */
 .phase-card{background:var(--s1);border:1px solid var(--b0);border-radius:var(--r);overflow:hidden;margin-bottom:10px}
-.phase-card.active-p .phase-card-hdr{background:rgba(212,43,43,.07);border-bottom-color:rgba(212,43,43,.2)}
+.phase-card.active-p .phase-card-hdr{background:rgba(230,235,240,.05);border-bottom-color:rgba(230,235,240,.18)}
 .phase-card-hdr{padding:13px 16px;border-bottom:1px solid var(--b0);display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
 .phase-name{font-weight:700;font-size:0.98rem;color:var(--text2);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .phase-meta{font-size:0.72rem;color:var(--muted2);margin-top:3px}
 .phase-sched{padding:10px 16px;display:flex;gap:5px;flex-wrap:wrap}
 .sched-chip{font-size:0.62rem;padding:3px 7px;border-radius:4px;background:var(--s2);border:1px solid var(--b0);color:var(--muted2);font-weight:600}
-.sched-chip.on{border-color:rgba(74,143,212,.4);color:var(--blue);background:var(--blueg)}
+.sched-chip.on{border-color:rgba(143,166,189,.4);color:var(--blue);background:var(--blueg)}
 .day-assign{display:flex;align-items:center;gap:10px;padding:6px 0;border-bottom:1px solid var(--b0)}
 /* Phase summary */
 .phase-summary-session{background:var(--s2);border:1px solid var(--b0);border-radius:6px;margin-bottom:8px;overflow:hidden}
@@ -2620,12 +2620,17 @@ function renderExChart(exName){
     if(bestE>0)e1Points.push({ds,val:fmtE(bestE)});
     if(vol>0)volPoints.push({ds,val:vol});
   });
-  drawLineChart('e1rm-chart',e1Points,exName+' — Est. 1RM ('+UNIT()+')','var(--orange)');
-  drawLineChart('main-chart',points,exName+' — Max Weight ('+UNIT()+')','var(--red)');
-  drawLineChart('vol-chart',volPoints,exName+' — Volume ('+UNIT()+')','var(--blue)');
+  drawLineChart('e1rm-chart',e1Points,exName+' — Est. 1RM ('+UNIT()+')','var(--red)');
+  drawLineChart('main-chart',points,exName+' — Max Weight ('+UNIT()+')','var(--blue)');
+  drawLineChart('vol-chart',volPoints,exName+' — Volume ('+UNIT()+')','var(--green)');
 }
 
+// Canvas can't read CSS variables, so resolve theme colors to real values first
+const cssVar=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const resolveColor=c=>{const m=/^var\((--[\w-]+)\)$/.exec(c);return m?cssVar(m[1]):c;};
+const withAlpha=(hex,a)=>{const h=hex.replace('#','');if(h.length!==6)return hex;return `rgba(${parseInt(h.slice(0,2),16)},${parseInt(h.slice(2,4),16)},${parseInt(h.slice(4,6),16)},${a})`;};
 function drawLineChart(canvasId,points,label,color){
+  color=resolveColor(color);
   const canvas=document.getElementById(canvasId);if(!canvas||!points.length)return;
   const dpr=window.devicePixelRatio||1;
   const w=canvas.parentElement.clientWidth-24;
@@ -2643,11 +2648,11 @@ function drawLineChart(canvasId,points,label,color){
   const chartW=w-pad.l-pad.r;
   const chartH=h-pad.t-pad.b;
   // Grid lines
-  ctx.strokeStyle='rgba(30,45,72,.8)';ctx.lineWidth=1;
+  ctx.strokeStyle=cssVar('--b0');ctx.lineWidth=1;
   for(let i=0;i<=4;i++){
     const y=pad.t+chartH*(1-i/4);
     ctx.beginPath();ctx.moveTo(pad.l,y);ctx.lineTo(pad.l+chartW,y);ctx.stroke();
-    ctx.fillStyle='rgba(106,133,168,.7)';ctx.font='9px Manrope';ctx.textAlign='right';
+    ctx.fillStyle=cssVar('--muted2');ctx.font='9px Manrope';ctx.textAlign='right';
     ctx.fillText(Math.round(minV+range*(i/4)),pad.l-4,y+3);
   }
   // Line
@@ -2664,7 +2669,8 @@ function drawLineChart(canvasId,points,label,color){
   ctx.beginPath();
   points.forEach((p,i)=>{const x=pad.l+chartW*(i/(points.length-1||1));const y=pad.t+chartH*(1-(p.val-minV)/range);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);});
   ctx.lineTo(pad.l+chartW,pad.t+chartH);ctx.lineTo(pad.l,pad.t+chartH);ctx.closePath();
-  ctx.fillStyle=color.replace('var(--red)','rgba(212,43,43,.12)').replace('var(--blue)','rgba(74,143,212,.12)');
+  const grad=ctx.createLinearGradient(0,pad.t,0,pad.t+chartH);grad.addColorStop(0,withAlpha(color,.22));grad.addColorStop(1,withAlpha(color,0));
+  ctx.fillStyle=grad;
   ctx.fill();ctx.restore();
   // Dots
   ctx.fillStyle=color;
@@ -2674,7 +2680,7 @@ function drawLineChart(canvasId,points,label,color){
     ctx.beginPath();ctx.arc(x,y,3,0,Math.PI*2);ctx.fill();
   });
   // X labels — show first, mid, last
-  ctx.fillStyle='rgba(106,133,168,.8)';ctx.font='9px IBM Plex Mono';ctx.textAlign='center';
+  ctx.fillStyle=cssVar('--muted2');ctx.font='9px IBM Plex Mono';ctx.textAlign='center';
   const show=[0,Math.floor(points.length/2),points.length-1].filter((v,i,a)=>a.indexOf(v)===i);
   show.forEach(i=>{
     const p=points[i];const x=pad.l+chartW*(i/(points.length-1||1));
