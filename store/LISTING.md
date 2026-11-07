@@ -21,6 +21,10 @@ Paste these into App Store Connect. Character limits are Apple's.
 > • Last session's weight, reps and RPE sit in the corner of every box
 > • Quick +/− buttons for the set you're on
 > • Check off a set and the rest timer starts, with a notification when rest is up, even with your phone locked
+> • Machine taken? Swap an exercise for today without changing your plan
+> • Mark warm-up sets so they never skew your PRs or volume
+> • No plan today? Start a quick workout
+> • A finish screen with your PRs and volume, ready to share
 > • Screen stays awake while you log
 >
 > PLAN YOUR TRAINING
@@ -60,6 +64,9 @@ Data collection: **Yes**. Tracking: **No** for every type.
 | Health & Fitness → Fitness | Yes | Yes | No | App Functionality |
 | User Content → Other User Content (notes) | Yes | Yes | No | App Functionality |
 | Identifiers → User ID | Yes | Yes | No | App Functionality |
+| Usage Data → Product Interaction | Yes | Yes | No | Analytics |
+| Diagnostics → Crash Data | Yes | Yes | No | App Functionality |
+| Diagnostics → Other Diagnostic Data | Yes | Yes | No | App Functionality |
 
 Everything else: Not collected.
 

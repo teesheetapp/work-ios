@@ -323,6 +323,38 @@ label{font-size:0.65rem;color:var(--muted2);letter-spacing:.8px;text-transform:u
 .vol-bar{height:100%;background:var(--blue);border-radius:3px;transition:width .3s}
 .rpe-sel{width:100%;padding:6px 1px;font-size:0.68rem;text-align:center;background:var(--s2);color:var(--text);border:1px solid var(--b1);border-radius:5px;font-family:'IBM Plex Mono',monospace;appearance:none;-webkit-appearance:none;text-align-last:center}
 .rpe-sel:focus{outline:none;border-color:var(--blue)}
+.ex-act{background:none;border:1px solid var(--b1);color:var(--muted2);border-radius:5px;font:600 0.62rem 'Manrope',sans-serif;letter-spacing:.4px;padding:4px 8px;cursor:pointer;flex:none}
+.ex-act-x{padding:4px 7px}
+.log-set-num.warm{color:var(--orange);background:var(--orangeg);border:1px solid rgba(232,194,122,.3);cursor:pointer}
+.log-set-num{cursor:pointer;user-select:none;-webkit-user-select:none}
+.log-set-grid.is-warm input,.log-set-grid.is-warm select{opacity:.6}
+.set-tools{display:flex;gap:16px;align-items:center;flex-wrap:wrap;font-size:0.72rem;margin:2px 0 4px}
+.set-tip{margin-left:auto;font-size:0.62rem;color:var(--muted)}
+.log-add-ex{width:100%;margin:4px 0 8px;padding:11px}
+.quick-row{margin-top:10px}.quick-row .btn{width:100%;padding:11px}
+.xp-ov{z-index:400}
+.xp-modal{height:86vh}
+.xp-item{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 4px;border-bottom:1px solid var(--b0);cursor:pointer;color:var(--text2);font-size:0.86rem}
+.xp-item:active{background:var(--s2)}
+.xp-new{color:var(--red);font-weight:600}
+.xp-mg{font-size:0.66rem;color:var(--muted2);flex:none}
+.xp-sec{font-size:0.62rem;letter-spacing:1px;text-transform:uppercase;color:var(--muted2);padding:14px 4px 6px}
+.fin-ov{z-index:450;align-items:center}
+.fin-modal{border-radius:16px;margin:0 14px;max-height:88vh;border:1px solid var(--b1)}
+#fin-body{padding:26px 22px 18px}
+.fin-kicker{font-size:0.66rem;letter-spacing:2px;text-transform:uppercase;color:var(--green);font-weight:600}
+.fin-name{font-family:'Saira Semi Condensed',sans-serif;font-weight:600;font-size:2rem;color:var(--text2);line-height:1.1;margin-top:6px}
+.fin-date{font-size:0.8rem;color:var(--muted2);margin-top:2px}
+.fin-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:18px}
+.fin-tile{background:var(--s2);border:1px solid var(--b0);border-radius:var(--r);padding:12px 6px;text-align:center}
+.fin-val{font-weight:300;font-size:1.45rem;color:var(--text2);font-variant-numeric:tabular-nums}
+.fin-lbl{font-size:0.58rem;letter-spacing:.8px;text-transform:uppercase;color:var(--muted2);margin-top:3px}
+.fin-delta{margin-top:14px;font-size:0.82rem;font-weight:600}
+.fin-delta.up{color:var(--green)}.fin-delta.down{color:var(--danger)}
+.fin-prs{margin-top:16px;border-top:1px solid var(--b0);padding-top:12px}
+.fin-prs-hdr{font-size:0.66rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--orange);font-weight:700;margin-bottom:6px}
+.fin-pr{display:flex;justify-content:space-between;gap:10px;padding:7px 0;font-size:0.86rem;color:var(--text2);border-bottom:1px solid var(--b0)}
+.fin-pr span:last-child{font-weight:600;font-variant-numeric:tabular-nums}
 .log-set-num{font-family:'IBM Plex Mono',monospace;font-size:0.65rem;color:var(--muted2);text-align:center;background:var(--s0);border-radius:4px;padding:4px 2px}
 .sync-row{display:flex;justify-content:flex-end;margin-bottom:12px}
 .sync-pill{position:relative;display:inline-flex;align-items:center;gap:3px;padding:2px 7px;border-radius:4px;font-size:0.62rem;font-weight:700;letter-spacing:.6px;text-transform:uppercase;white-space:nowrap;cursor:pointer;border:1px solid var(--b1);background:var(--s0);color:var(--muted);transition:all .2s}
@@ -632,6 +664,28 @@ canvas.chart{width:100%!important;height:160px!important}
 </div>
 
 <!-- LOG MODAL -->
+<div id="xp-ov" class="overlay xp-ov" onclick="if(event.target===this)closeExPicker()">
+  <div class="modal xp-modal">
+    <div class="modal-hdr"><div class="modal-title" id="xp-title">Add exercise</div><button class="modal-close" onclick="closeExPicker()">✕</button></div>
+    <div style="padding:10px 14px 0"><input type="search" id="xp-q" placeholder="Search or type a new exercise" autocomplete="off" oninput="renderExPicker()" onkeydown="if(event.key==='Enter'){const f=document.querySelector('#xp-list .xp-item');if(f)f.click();}"></div>
+    <div class="modal-scroll" id="xp-list"></div>
+  </div>
+</div>
+<div id="qs-ov" class="overlay" onclick="if(event.target===this)closeQuickStart()">
+  <div class="modal">
+    <div class="modal-hdr"><div class="modal-title">Quick workout</div><button class="modal-close" onclick="closeQuickStart()">✕</button></div>
+    <div class="modal-scroll" id="qs-list"></div>
+  </div>
+</div>
+<div id="fin-ov" class="overlay fin-ov">
+  <div class="modal fin-modal">
+    <div class="modal-scroll" id="fin-body"></div>
+    <div class="modal-footer">
+      <button class="btn btn-red" id="fin-share" onclick="shareFinish()">Share</button>
+      <button class="btn btn-outline" onclick="closeFinish()" style="flex:0;padding:11px 18px">Done</button>
+    </div>
+  </div>
+</div>
 <div id="log-ov" class="overlay">
   <div class="modal">
     <div class="modal-hdr">
@@ -744,6 +798,36 @@ function noteAuthStatus(status){
   else if(status>=200&&status<300&&lastCallAsUser&&authNeeded){authNeeded=false;renderAccount();}
 }
 
+// ══ USAGE + ERRORS ══
+// Which features get used, and any errors, stored in this app's own database. Never sold, never used for ads.
+const EVQ_KEY='ll_evq';let evTimer=null,errCount=0;const errSeen=new Set();
+function track(event,props){
+  try{
+    const q=JSON.parse(localStorage.getItem(EVQ_KEY)||'[]');
+    q.push({event,props:props||{},created_at:new Date().toISOString(),app_version:APP_VERSION,platform:NP()?'ios':'web'});
+    localStorage.setItem(EVQ_KEY,JSON.stringify(q.slice(-200)));
+  }catch(e){}
+  clearTimeout(evTimer);evTimer=setTimeout(flushEvents,4000);
+}
+async function flushEvents(){
+  if(!isSignedIn()||!navigator.onLine)return;
+  let q;try{q=JSON.parse(localStorage.getItem(EVQ_KEY)||'[]');}catch(e){q=[];}
+  if(!q.length)return;
+  try{
+    const r=await fetch(`${SUPA_URL}/rest/v1/app_events`,{method:'POST',headers:await authHeaders('return=minimal'),body:JSON.stringify(q)});
+    // Sent, or rejected for good (e.g. table not set up yet): either way don't keep piling up
+    if(r.ok||(r.status>=400&&r.status<500&&r.status!==401&&r.status!==403)){
+      const now=JSON.parse(localStorage.getItem(EVQ_KEY)||'[]');localStorage.setItem(EVQ_KEY,JSON.stringify(now.slice(q.length)));
+    }
+  }catch(e){}
+}
+function trackError(msg,where){
+  const m=String(msg||'').slice(0,300);if(!m||errSeen.has(m)||errCount>=5)return;
+  errSeen.add(m);errCount++;track('error',{message:m,where:String(where||'').slice(0,200),page:document.querySelector('.page.active')?.id||''});
+}
+window.addEventListener('error',e=>trackError(e.message,(e.filename||'').split('/').pop()+':'+e.lineno+':'+e.colno));
+window.addEventListener('unhandledrejection',e=>trackError(e.reason&&(e.reason.message||e.reason),'promise'));
+
 // \u2550\u2550 ACCOUNT SCREENS \u2550\u2550
 let gateMode='signin',gateEmail='';
 const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -800,6 +884,7 @@ async function signUp(){
     const r=await authPost('signup',{email,password:pw});
     if(!r.ok){gateSay(authErr(r.d,'Could not create the account. Try again.'),'var(--danger)');return;}
     gateEmail=email;
+    track('sign_up');
     if(r.d.access_token){await finishSignIn(r.d);return;}
     renderGate('verify');
   }catch(e){gateSay('No connection. Try again when you are online.','var(--danger)');}
@@ -901,7 +986,7 @@ async function deleteAccount(){
     if(!r.ok){say('Could not delete right now ('+r.status+'). Check your connection and try again.');return;}
     const ns=uidNS();
     Object.keys(localStorage).filter(k=>k.startsWith(ns)).forEach(k=>localStorage.removeItem(k));
-    try{localStorage.removeItem(AUTH_KEY);}catch(e){}
+    try{localStorage.removeItem(AUTH_KEY);localStorage.removeItem(EVQ_KEY);}catch(e){}
     stopTimer();go('today');renderAccount();renderSyncBadge();
     showLoginGate('Your account and data were deleted.');
   }catch(e){say('No connection. Try again when you are online.');}
@@ -911,7 +996,7 @@ function renderSettings(){
   document.querySelectorAll('#unit-seg button').forEach(b=>b.classList.toggle('on',b.textContent===UNIT()));
   const v=document.getElementById('app-ver');if(v)v.textContent='v'+APP_VERSION;
 }
-function setUnit(u){DB.sset({...DB.settings(),unit:u});renderSettings();}
+function setUnit(u){DB.sset({...DB.settings(),unit:u});track('unit_change',{unit:u});renderSettings();}
 function badgeTap(){
   if(!isSignedIn()||authNeeded){showLoginGate();return;}
   manualSync();
@@ -1081,6 +1166,15 @@ function e1rm(w,r){
   return R===1?W:W*(1+R/30);
 }
 const fmtE=v=>v?Math.round(v*10)/10:0;
+// "bench press", "Bench Press " and "Bench  Press" are the same exercise
+const normName=n=>String(n||'').trim().replace(/\s+/g,' ').toLowerCase();
+const sameEx=(a,b)=>normName(a)===normName(b);
+const cleanName=n=>String(n||'').trim().replace(/\s+/g,' ');
+// Warm-up sets never count toward PRs, volume or set totals
+const workSets=sets=>(sets||[]).filter(st=>!st.warm);
+const canonName=n=>(typeof LIB!=='undefined'&&LIB.find(x=>sameEx(x,n)))||cleanName(n);
+const prKey=(prs,name)=>Object.keys(prs).find(k=>sameEx(k,name))||canonName(name);
+const prFor=name=>{const prs=DB.prs();return prs[name]||prs[prKey(prs,name)]||null;};
 // Best e1RM stored on a PR record, falling back for records saved before this existed
 const prE1=pr=>pr?(pr.e1rm||e1rm(pr.weight,pr.reps)):0;
 
@@ -1088,16 +1182,19 @@ const prE1=pr=>pr?(pr.e1rm||e1rm(pr.weight,pr.reps)):0;
 // Rebuild the entire PR table from every logged session.
 // Only run on demand — stored PRs are authoritative so manual edits survive.
 function recomputePRs(){
-  const logs=DB.logs(),out={};
+  const logs=DB.logs(),out={},keyOf={};
   Object.keys(logs).sort().forEach(ds=>{
     const log=logs[ds];
     (log.exercises||[]).forEach(ex=>{
       if(ex.isRun||ex.isBW)return;
-      (ex.sets||[]).forEach(st=>{
+      const n=normName(ex.name);keyOf[n]=LIB.some(x=>sameEx(x,ex.name))?canonName(ex.name):cleanName(ex.name);const k0=Object.keys(out).find(x=>sameEx(x,ex.name));
+      if(k0&&k0!==keyOf[n]){out[keyOf[n]]=out[k0];delete out[k0];}
+      const k=keyOf[n];
+      workSets(ex.sets).forEach(st=>{
         const E=e1rm(st.weight,st.reps);
         if(E<=0)return;
-        if(!out[ex.name]||E>prE1(out[ex.name])+0.05)
-          out[ex.name]={weight:st.weight,reps:st.reps,date:ds,workoutName:log.workoutName||'',e1rm:fmtE(E)};
+        if(!out[k]||E>prE1(out[k])+0.05)
+          out[k]={weight:st.weight,reps:st.reps,date:ds,workoutName:log.workoutName||'',e1rm:fmtE(E)};
       });
     });
   });
@@ -1112,13 +1209,14 @@ function bestsExcluding(excludeDate){
     if(ds===excludeDate)return;
     (logs[ds].exercises||[]).forEach(ex=>{
       if(ex.isRun||ex.isBW)return;
-      (ex.sets||[]).forEach(st=>{
+      const n=normName(ex.name);
+      workSets(ex.sets).forEach(st=>{
         const E=e1rm(st.weight,st.reps);
-        if(E>(best[ex.name]||0))best[ex.name]=E;
+        if(E>(best[n]||0))best[n]=E;
       });
     });
   });
-  return best;
+  return best;   // keyed by normalized name
 }
 
 const MUSCLES=['Chest','Back','Shoulders','Biceps','Triceps','Quads','Hamstrings','Glutes','Calves','Core','Cardio','Other'];
@@ -1151,6 +1249,7 @@ const MUSCLE_MAP={
 function muscleFor(name,explicit){
   if(explicit&&MUSCLES.includes(explicit))return explicit;
   if(MUSCLE_MAP[name])return MUSCLE_MAP[name];
+  const hit=Object.keys(MUSCLE_MAP).find(k=>sameEx(k,name));if(hit)return MUSCLE_MAP[hit];
   const n=(name||'').toLowerCase();
   if(/bench|chest|pec|fly|push-?up/.test(n))return 'Chest';
   if(/row|pull|lat|deadlift|shrug/.test(n))return 'Back';
@@ -1224,6 +1323,7 @@ function startProgram(key){
   const ds=`${mon.getFullYear()}-${String(mon.getMonth()+1).padStart(2,'0')}-${String(mon.getDate()).padStart(2,'0')}`;
   const ph={id:uid(),name:p.name,weeks:8,daysPerWeek:p.days.length,startDate:ds,schedule:p.days.map(d=>({day:d.day,workoutId:ids[d.wo]}))};
   DB.sw([...DB.workouts(),...wos]);DB.sp([...DB.phases(),ph]);DB.sa(ph.id);
+  track('program_start',{program:key});
   renderToday();
 }
 
@@ -1377,7 +1477,7 @@ function calcStreak(){
 }
 function calcVolume(log){
   if(!log)return 0;
-  return log.exercises.filter(e=>!e.isRun).reduce((a,ex)=>a+ex.sets.filter(s=>s.done).reduce((b,s)=>{
+  return log.exercises.filter(e=>!e.isRun).reduce((a,ex)=>a+workSets(ex.sets).filter(s=>s.done).reduce((b,s)=>{
     const w=parseFloat(s.weight)||0,r=parseInt(s.reps)||0;return b+(w*r);},0),0);
 }
 function getLastLog(exName, excludeDate){
@@ -1385,7 +1485,7 @@ function getLastLog(exName, excludeDate){
   const dates=Object.keys(logs).sort((a,b)=>b.localeCompare(a));
   for(const ds of dates){
     if(ds===excludeDate)continue;
-    const ex=logs[ds].exercises.find(e=>e.name===exName&&!e.isRun&&!e.isBW);
+    const ex=logs[ds].exercises.find(e=>sameEx(e.name,exName)&&!e.isRun&&!e.isBW);
     if(ex&&ex.sets?.some(s=>s.weight||s.reps)){
       const d=new Date(ds+'T12:00:00');
       return {...ex,_date:d.toLocaleDateString('en-US',{month:'short',day:'numeric'})};
@@ -1399,7 +1499,7 @@ function getLastNote(exName, excludeDate){
   const dates=Object.keys(logs).sort((a,b)=>b.localeCompare(a));
   for(const ds of dates){
     if(ds===excludeDate)continue;
-    const ex=logs[ds].exercises?.find(e=>e.name===exName);
+    const ex=logs[ds].exercises?.find(e=>sameEx(e.name,exName));
     if(ex&&ex.notes&&ex.notes.trim()){
       const d=new Date(ds+'T12:00:00');
       return {notes:ex.notes.trim(),_date:d.toLocaleDateString('en-US',{month:'short',day:'numeric'})};
@@ -1439,7 +1539,7 @@ function setsRemaining(wo,log){
   if(!wo)return null;
   let total=0,done=0;
   wo.exercises.forEach(ex=>{
-    const lex=(log&&log.exercises)?log.exercises.find(e=>e.name===ex.name):null;
+    const lex=(log&&log.exercises)?log.exercises.find(e=>sameEx(e.name,ex.name)):null;
     if(ex.type==='run'){total+=1;if(lex&&lex.done)done+=1;return;}
     total+=ex.sets?.length||0;
     if(lex&&lex.sets)done+=lex.sets.filter(s=>s.done).length;
@@ -1487,8 +1587,8 @@ function bwTrend(){
 function renderToday(){
   const c=document.getElementById('today-body');
   const today=todayStr(),d=new Date();
-  const wo=getWorkoutForDate(today);
   const logs=DB.logs(),logged=logs[today];
+  const wo=(logged&&logged.exercises&&logged.exercises.length)?woFromLog(logged,getWorkoutForDate(today)):getWorkoutForDate(today);
   const phase=getActivePhase();
   const streak=calcStreak();
   const totalSessions=Object.keys(logs).length;
@@ -1528,27 +1628,27 @@ function renderToday(){
     ${todayBW?`<span class="tag tag-blue">Logged</span>`:''}
   </div>`;
 
-  if(!phase){
+  if(!phase&&!logged){
     if(!DB.workouts().length&&!DB.phases().length){
       h+=`<div class="sec-title mb4">Pick a starting program</div><div class="pg-sub mb14">An 8-week plan starting this week. You can change any exercise, set or day later.</div>`;
       Object.entries(PROGRAMS).forEach(([k,p])=>{
         h+=`<div class="prog-card" onclick="startProgram('${k}')"><div class="prog-name">${p.name}</div><div class="prog-meta">${p.days.length} days a week \u00b7 ${p.level}</div>
           <div class="prog-days">${p.days.map(d=>`<strong>${['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][d.day]}</strong> ${p.workouts[d.wo].name}`).join(' \u00b7 ')}</div></div>`;
       });
-      h+=`<div style="text-align:center;margin-top:14px"><span class="lnk" onclick="go('builder')">Build my own instead</span></div>`;
+      h+=`<div style="text-align:center;margin-top:14px;display:flex;gap:18px;justify-content:center;flex-wrap:wrap"><span class="lnk" onclick="go('builder')">Build my own instead</span><span class="lnk" onclick="openQuickStart()">Just log a quick workout</span></div>`;
     }else{
-      h+=`<div class="empty"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><p>No active phase.<br><strong>Go to Phases</strong> to start one.</p></div>`;
+      h+=`<div class="empty"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><p>No active phase.<br><strong>Go to Phases</strong> to start one.</p></div><div class="quick-row"><button class="btn btn-outline" onclick="openQuickStart()">⚡ Start a quick workout</button></div>`;
     }
     c.innerHTML=h;renderSyncBadge();return;
   }
 
-  if(isMR){
-    h+=`<div class="workout-preview"><div class="workout-preview-hdr"><span class="workout-preview-name" style="color:var(--orange)">Manual Rest Day</span><button class="btn btn-outline btn-sm" onclick="toggleManualRest('${today}');renderToday()">Undo</button></div><div style="padding:16px;color:var(--muted2);font-size:0.85rem">You marked today as rest.</div></div>`;
+  if(isMR&&!logged){
+    h+=`<div class="workout-preview"><div class="workout-preview-hdr"><span class="workout-preview-name" style="color:var(--orange)">Manual Rest Day</span><button class="btn btn-outline btn-sm" onclick="toggleManualRest('${today}');renderToday()">Undo</button></div><div style="padding:16px;color:var(--muted2);font-size:0.85rem">You marked today as rest.</div></div><div class="quick-row"><button class="btn btn-outline" onclick="openQuickStart()">⚡ Start a quick workout</button></div>`;
     c.innerHTML=h;renderSyncBadge();return;
   }
 
   if(!wo){
-    h+=`<div class="workout-preview"><div class="workout-preview-hdr"><span class="workout-preview-name" style="color:var(--muted2)">Rest Day</span><button class="btn btn-outline btn-sm" onclick="toggleManualRest('${today}');renderToday()">Override</button></div><div style="padding:16px;color:var(--muted2);font-size:0.85rem">No workout scheduled — recover well.</div></div>`;
+    h+=`<div class="workout-preview"><div class="workout-preview-hdr"><span class="workout-preview-name" style="color:var(--muted2)">Rest Day</span><button class="btn btn-outline btn-sm" onclick="toggleManualRest('${today}');renderToday()">Override</button></div><div style="padding:16px;color:var(--muted2);font-size:0.85rem">No workout scheduled — recover well.</div></div><div class="quick-row"><button class="btn btn-outline" onclick="openQuickStart()">⚡ Start a quick workout</button></div>`;
     c.innerHTML=h;renderSyncBadge();return;
   }
 
@@ -1568,15 +1668,15 @@ function renderToday(){
       </div>
       <div class="fg">
         ${logged?`<span class="tag tag-orange">${compPct}%</span>`:''}
-        <button class="btn btn-outline btn-sm" onclick="toggleManualRest('${today}');renderToday()">Rest Day</button>
+        ${logged?'':`<button class="btn btn-outline btn-sm" onclick="toggleManualRest('${today}');renderToday()">Rest Day</button>`}
       </div>
     </div>`;
 
   wo.exercises.forEach(ex=>{
     const isRun=ex.type==='run',isBW=ex.type==='bw';
     // Prefer today's actual logged values over the builder template
-    const lex=logged&&logged.exercises?logged.exercises.find(e=>e.name===ex.name):null;
-    const lset=(lex&&lex.sets?lex.sets:[]).find(s=>s.reps||(s.weight&&s.weight!=='BW'));
+    const lex=logged&&logged.exercises?logged.exercises.find(e=>sameEx(e.name,ex.name)):null;
+    const lset=workSets(lex&&lex.sets?lex.sets:[]).find(s=>s.reps||(s.weight&&s.weight!=='BW'));
     const runLogged=!!(lex&&(lex.runType||lex.runDistance||lex.runTime));
     const fromLog=isRun?runLogged:!!lset;
     // Completion status for this exercise: none / part / done
@@ -1612,6 +1712,7 @@ function renderToday(){
     <button class="btn btn-red" onclick="openLog('${today}')" style="width:100%;padding:11px;font-size:0.85rem">
       ${logged?'✎ Edit Log':'▶ Log This Workout'}
     </button>
+    ${logged?'':`<div style="text-align:center;margin-top:9px"><span class="lnk" style="font-size:0.75rem" onclick="openQuickStart()">Do a different workout today</span></div>`}
   </div></div>`;
 
   if(logged){
@@ -1621,7 +1722,7 @@ function renderToday(){
       h+=`<div class="log-entry-row">
         <div style="font-weight:600;font-size:0.8rem;color:var(--text2);display:flex;align-items:center;gap:6px;margin-bottom:3px">${ex.name}${ex.isRun?' <span class="tag tag-purple" style="font-size:0.5rem">Run</span>':ex.isBW?' <span class="tag tag-green" style="font-size:0.5rem">BW</span>':''}</div>
         ${ex.isRun?`<div style="font-size:0.72rem;color:${ex.done?'var(--green)':'var(--muted2)'};font-family:'IBM Plex Mono',monospace">${[ex.runType,ex.runDistance,ex.runTime].filter(Boolean).join(' · ')||'—'}${ex.done?' ✓':''}</div>`
-          :(ex.sets||[]).map((s,i)=>`<div style="font-size:0.7rem;color:var(--muted2);font-family:'IBM Plex Mono',monospace">S${i+1}: ${ex.isBW?'BW':((s.weight||'—')+UNIT())} × ${s.reps||'—'}${s.rpe?` @${s.rpe}`:''} ${s.pr?'<span class="pr-badge">PR</span>':''}</div>`).join('')}
+          :(ex.sets||[]).map((s,i)=>`<div style="font-size:0.7rem;color:var(--muted2);font-family:'IBM Plex Mono',monospace">${s.warm?'W':'S'+(i+1)}: ${ex.isBW?'BW':((s.weight||'—')+UNIT())} × ${s.reps||'—'}${s.rpe?` @${s.rpe}`:''} ${s.pr?'<span class="pr-badge">PR</span>':''}</div>`).join('')}
         ${ex.notes?`<div style="font-size:0.68rem;font-style:italic;color:var(--muted);margin-top:3px">${ex.notes}</div>`:''}
       </div>`;
     });
@@ -1663,7 +1764,7 @@ function renderCal(){
       const ds=dateStr(dt),wo=getWorkoutForDate(ds),isT=ds===today,isL=!!logs[ds];
       const isMR=isManualRest(ds),isFuture=ds>today;
       const cls=['day-cell',isT?'today':'',isL?'logged':'',isMR?'manual-rest':wo?'':'rest',isFuture&&!isT?'future':''].filter(Boolean).join(' ');
-      h+=`<div class="${cls}" onclick="${wo&&!isMR?`openLog('${ds}')`:''}" oncontextmenu="event.preventDefault();toggleRestDay('${ds}')" ontouchstart="touchStart('${ds}')" ontouchend="touchEnd()">
+      h+=`<div class="${cls}" onclick="${(wo&&!isMR)||DB.logs()[ds]?`openLog('${ds}')`:''}" oncontextmenu="event.preventDefault();toggleRestDay('${ds}')" ontouchstart="touchStart('${ds}')" ontouchend="touchEnd()">
         <div class="day-nm">${DAYS[dt.getDay()]}</div>
         <div class="day-n">${dt.getDate()}</div>
         ${isMR?`<div style="font-size:0.48rem;color:var(--orange)">REST</div>`:wo?`<div class="day-wlbl">${wo.name.substring(0,11)}</div>`:''}
@@ -1700,7 +1801,7 @@ function renderMonthCal(){
     const isT=ds===today,isL=!!logs[ds];
     const isMR=isManualRest(ds);
     const cls=['month-cell',isT?'today':'',isL?'logged':'',isMR?'manual-rest-day':wo?'':'rest-day'].filter(Boolean).join(' ');
-    h+=`<div class="${cls}" onclick="${wo&&!isMR?`openLog('${ds}')`:''}" oncontextmenu="event.preventDefault();toggleRestDay('${ds}');renderMonthCal()">
+    h+=`<div class="${cls}" onclick="${(wo&&!isMR)||DB.logs()[ds]?`openLog('${ds}')`:''}" oncontextmenu="event.preventDefault();toggleRestDay('${ds}');renderMonthCal()">
       <div class="month-n">${d}</div>
       ${wo&&!isMR?`<div class="month-wlbl">${wo.name.substring(0,10)}</div>`:''}
       ${isL?`<div class="month-chk">✓</div>`:''}
@@ -1720,81 +1821,288 @@ function toggleRestDay(ds){toggleManualRest(ds);renderCal();renderMonthCal();}
 
 // ══ LOG MODAL ══
 let logDate=null;
-function openLog(ds){
-  logDate=ds;
-  const wo=getWorkoutForDate(ds);if(!wo)return;
-  if(isManualRest(ds)){if(!confirm('This day is marked as rest. Log anyway?'))return;}
+// The session being logged. A copy, so swaps and added exercises never change the saved workout.
+let logWo=null,logOpts={};
+const BW_EX=['Pull-Up','Chin-Up','Push-Up','Dips (Chest)','Dips (Tricep)','Plank','Side Plank','Hanging Leg Raise','Decline Sit-Up','Russian Twist','Ab Wheel Rollout'];
+const CARDIO_EX=['Treadmill','Bike','Rowing Machine','Stairmaster','Jump Rope'];
+const typeFor=(name,fallback)=>CARDIO_EX.some(n=>sameEx(n,name))?'run':BW_EX.some(n=>sameEx(n,name))?'bw':(LIB.some(n=>sameEx(n,name))?'lift':(fallback&&fallback!=='run'?fallback:'lift'));
+const newSessionEx=(name,type)=>({id:uid(),name:cleanName(name),type,restTime:type==='lift'?90:60,muscle:'',_isAlt:false,
+  sets:type==='run'?[]:[{weight:'',reps:''},{weight:'',reps:''},{weight:'',reps:''}],runType:'',runDistance:'',runTime:'',notes:''});
+// Rebuild a session from what was saved, so swapped or added exercises come back as logged
+function woFromLog(log,tpl){
+  const tplEx=n=>(tpl?.exercises||[]).find(e=>sameEx(e.name,n));
+  return{id:log.workoutId||null,name:log.workoutName||'Workout',quick:!!log.quick,
+    exercises:(log.exercises||[]).map(e=>{const t=tplEx(e.name);
+      return{id:t?.id||uid(),name:e.name,type:e.isRun?'run':e.isBW?'bw':'lift',restTime:t?.restTime||90,muscle:e.muscle||t?.muscle||'',_isAlt:!!t?._isAlt,
+        runType:t?.runType||'',runDistance:t?.runDistance||'',runTime:t?.runTime||'',notes:'',
+        sets:e.isRun?[]:(e.sets||[]).map((st,si)=>({weight:t?.sets?.[si]?.weight||'',reps:t?.sets?.[si]?.reps||''}))};})};
+}
+function openLog(ds,opts){
+  opts=opts||{};
   const logs=DB.logs(),xl=logs[ds];
+  const scheduled=getWorkoutForDate(ds);
+  let base=null;
+  if(opts.quick)base={id:null,name:'Quick Workout',quick:true,exercises:[]};
+  else if(opts.woId){const w=DB.workouts().find(w=>w.id===opts.woId);if(w)base={...resolveExercises(w,ds),quick:true};}
+  else if(xl&&xl.exercises&&xl.exercises.length)base=woFromLog(xl,scheduled);
+  else base=scheduled;
+  if(!base)return;
+  if(!opts.quick&&!opts.woId&&!xl&&isManualRest(ds)){if(!confirm('This day is marked as rest. Log anyway?'))return;}
+  logDate=ds;logOpts=opts;
+  logWo=JSON.parse(JSON.stringify(base));
+  // An unsaved draft brings back its own exercise list (swaps, additions) too
+  const d=getDraft();
+  if(d&&d.date===ds&&d.wo&&!(xl&&xl.savedAt&&Date.parse(xl.savedAt)>=d.ts))logWo=d.wo;
+  renderLogBody();
+  document.getElementById('log-ov').classList.add('open');
+  nat(P=>P.KeepAwake&&P.KeepAwake.keepAwake());
+  restoreDraft();
+  logWo.exercises.forEach((ex,ei)=>refreshActiveSet(ei));
+  updateComp();
+  if(!logWo.exercises.length)openExPicker('add');
+}
+function renderLogBody(){
+  const ds=logDate,wo=logWo,xl=DB.logs()[ds];
   const d=new Date(ds+'T12:00:00');
-  const logWeekA=isWeekA(ds);document.getElementById('log-title').textContent=`${wo.name} · ${d.toLocaleDateString('en-US',{month:'short',day:'numeric'})} · Week ${logWeekA?'A':'B'}`;
+  const phaseWeek=!wo.quick&&getActivePhase()?` · Week ${isWeekA(ds)?'A':'B'}`:'';
+  document.getElementById('log-title').textContent=`${wo.name} · ${d.toLocaleDateString('en-US',{month:'short',day:'numeric'})}${phaseWeek}`;
   let h='';
   wo.exercises.forEach((ex,ei)=>{
-    const exl=xl?.exercises?.find(e=>e.name===ex.name)||xl?.exercises?.[ei];
+    const exl=(xl?.exercises?.[ei]&&sameEx(xl.exercises[ei].name,ex.name))?xl.exercises[ei]:xl?.exercises?.find(e=>sameEx(e.name,ex.name));
     const isRun=ex.type==='run',isBW=ex.type==='bw';
-    // Pre-fill: today's saved log > last session logged > template defaults
     const lastLog=getLastLog(ex.name,ds);
     h+=`<div class="log-ex ${isRun?'type-run':''}">
       <div class="log-ex-hdr">
-        <div class="log-ex-name">${ex.name}${ex._isAlt?` <span class="week-badge-b">B</span>`:''}</div>
+        <div class="log-ex-name">${esc(ex.name)}${ex._isAlt?` <span class="week-badge-b">B</span>`:''}</div>
         ${isRun?'<span class="tag tag-purple">Run</span>':isBW?'<span class="tag tag-green">BW</span>':''}
-        ${lastLog?`<span class="tag tag-muted" style="margin-left:auto;font-size:0.5rem">↑ Last: ${lastLog._date||'prev session'}</span>`:''}
+        ${lastLog?`<span class="tag tag-muted" style="margin-left:auto;font-size:0.5rem">↑ Last: ${lastLog._date||'prev session'}</span>`:'<span style="margin-left:auto"></span>'}
+        <button class="ex-act" onclick="openExPicker('swap',${ei})" aria-label="Swap exercise">Swap</button>
+        <button class="ex-act ex-act-x" onclick="removeLogEx(${ei})" aria-label="Remove exercise">✕</button>
       </div>
       <div class="log-ex-body">`;
     if(isRun){
       h+=`<div class="log-run-grid">
-        <div class="field"><label>Type of Run</label><input id="rt-${ei}" value="${exl?.runType||ex.runType||''}" placeholder="Easy, Tempo..."></div>
-        <div class="field"><label>Distance</label><input id="rd-${ei}" value="${exl?.runDistance||ex.runDistance||''}" placeholder="3 miles, 5k..."></div>
-        <div class="field"><label>Time</label><input id="rtt-${ei}" value="${exl?.runTime||ex.runTime||''}" placeholder="28:45"></div>
+        <div class="field"><label>Type of Run</label><input id="rt-${ei}" value="${esc(exl?.runType||ex.runType||'')}" placeholder="Easy, Tempo..."></div>
+        <div class="field"><label>Distance</label><input id="rd-${ei}" value="${esc(exl?.runDistance||ex.runDistance||'')}" placeholder="3 miles, 5k..."></div>
+        <div class="field"><label>Time</label><input id="rtt-${ei}" value="${esc(exl?.runTime||ex.runTime||'')}" placeholder="28:45"></div>
       </div>
       <div onclick="toggleRunDone(${ei})" style="display:flex;align-items:center;gap:9px;margin-top:10px;padding:8px 10px;border:1px solid var(--b1);border-radius:7px;cursor:pointer;user-select:none">
         <div class="chk ${exl?.done?'on':''}" id="lc-${ei}-run">${chkSvg}</div>
         <span style="font-size:0.78rem;font-weight:600;color:var(--text2)">Run completed</span>
       </div>`;
     } else {
-      const pr=DB.prs()[ex.name];
+      const pr=prFor(ex.name);
       if(pr&&!isBW)h+=`<div class="log-pr-hint"><span class="pr-badge">PR</span>${pr.weight}${UNIT()} × ${pr.reps} · ${pr.date}<span style="margin-left:auto;color:var(--orange)">e1RM ${fmtE(prE1(pr))}</span></div>`;
-      // Column headers
       h+=`<div class="set-hdr ${isBW?'set-hdr-bw':'set-hdr-lift'}" style="grid-template-columns:${isBW?'28px 1fr 54px 40px 44px':'28px 1fr 1fr 54px 40px 44px'}">
         <span></span>${isBW?'':`<span>Weight</span>`}<span>Reps</span><span style="text-align:center">RPE</span><span style="text-align:center">⏱</span><span></span>
       </div>`;
-
-
-      ex.sets.forEach((s,si)=>{
+      const lastSets=lastLog?.sets||[];
+      ex.sets.forEach((st,si)=>{
         const sl=exl?.sets?.[si]||{};
-        const lastSet=lastLog?.sets?.[si];
-        // Priority: today's saved log > last actual session > template
-        const prefillW=sl.weight||(lastSet?.weight)||s.weight||'';
-        const prefillR=sl.reps||(lastSet?.reps)||s.reps||'';
-        const lastW=lastSet?.weight||'';
-        const lastR=lastSet?.reps||'';
-
-
-        // Quick weight adjust buttons (only for lift exercises)
-        const qwRow=!isBW?`<div class="qw-btns" id="qw-${ei}-${si}">${QW_STEPS().map(d=>`<div class="qw-btn${d<0?' minus':''}" onclick="adjustWeight(${ei},${si},${d})">${d>0?'+':''}${d}</div>`).join('')}</div>`:'';
-
-        h+=`<div class="log-set-grid ${isBW?'lsg-bw':'lsg-lift'}">
-          <div class="log-set-num">S${si+1}</div>
-          ${isBW?'':`<div class="inp-wrap"><input type="number" inputmode="decimal" id="lw-${ei}-${si}" value="${prefillW}" placeholder="${UNIT()}" oninput="updateComp()" onfocus="setActiveSet(${ei},${si})">${lastW?`<span class="inp-last">last ${lastW}</span>`:''}</div>`}
-          <div class="inp-wrap"><input type="number" inputmode="numeric" id="lr-${ei}-${si}" value="${prefillR}" placeholder="reps" oninput="updateComp()" onfocus="setActiveSet(${ei},${si})">${lastR?`<span class="inp-last">last ${lastR}</span>`:''}</div>
+        // More sets than last time? Use last time's final set for the extras.
+        const lastSet=lastSets[si]||(si>=lastSets.length&&lastSets.length?lastSets[lastSets.length-1]:null);
+        const prefillW=sl.weight||(lastSet?.weight)||st.weight||'';
+        const prefillR=sl.reps||(lastSet?.reps)||st.reps||'';
+        const lastW=lastSet?.weight||'',lastR=lastSet?.reps||'';
+        const warm=!!sl.warm;
+        const qwRow=!isBW?`<div class="qw-btns" id="qw-${ei}-${si}">${QW_STEPS().map(dl=>`<div class="qw-btn${dl<0?' minus':''}" onclick="adjustWeight(${ei},${si},${dl})">${dl>0?'+':''}${dl}</div>`).join('')}</div>`:'';
+        h+=`<div class="log-set-grid ${isBW?'lsg-bw':'lsg-lift'}${warm?' is-warm':''}" id="lsg-${ei}-${si}">
+          <div class="log-set-num${warm?' warm':''}" id="lsn-${ei}-${si}" onclick="toggleWarm(${ei},${si})" title="Tap to mark as warm-up">${warm?'W':'S'+(si+1)}</div>
+          ${isBW?'':`<div class="inp-wrap"><input type="number" inputmode="decimal" id="lw-${ei}-${si}" value="${prefillW}" placeholder="${UNIT()}" oninput="updateComp();queueDraft()" onfocus="setActiveSet(${ei},${si})">${lastW?`<span class="inp-last">last ${lastW}</span>`:''}</div>`}
+          <div class="inp-wrap"><input type="number" inputmode="numeric" id="lr-${ei}-${si}" value="${prefillR}" placeholder="reps" oninput="updateComp();queueDraft()" onfocus="setActiveSet(${ei},${si})">${lastR?`<span class="inp-last">last ${lastR}</span>`:''}</div>
           <div class="inp-wrap">${rpeSel(ei,si,sl.rpe)}${lastSet&&lastSet.rpe?`<span class="inp-last">@${lastSet.rpe}</span>`:''}</div>
           <div class="timer-btn" id="tbtn-${ei}-${si}" onclick="startTimer(${ei},${si})" title="Rest timer">⏱</div>
           <div class="chk ${sl.done?'on':''}" id="lc-${ei}-${si}" onclick="toggleSet(${ei},${si})">${chkSvg}</div>
         </div>${qwRow}`;
       });
+      h+=`<div class="set-tools"><span class="lnk" onclick="addLogSet(${ei})">+ Add set</span>${ex.sets.length>1?`<span class="lnk" onclick="removeLogSet(${ei})">− Remove last set</span>`:''}<span class="set-tip">Tap S1 to mark a warm-up</span></div>`;
     }
     const carriedNote=getLastNote(ex.name,ds);
     const noteVal=exl?.notes||carriedNote?.notes||ex.notes||'';
     const isCarried=!exl?.notes&&!!carriedNote?.notes;
-    h+=`<div class="field mt8"><label>Notes${isCarried?` <span style="color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0">· carried from ${carriedNote._date}</span>`:''}</label><textarea id="ln-${ei}" placeholder="How it felt...">${noteVal}</textarea></div>
+    h+=`<div class="field mt8"><label>Notes${isCarried?` <span style="color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0">· carried from ${carriedNote._date}</span>`:''}</label><textarea id="ln-${ei}" placeholder="How it felt..." oninput="queueDraft()">${esc(noteVal)}</textarea></div>
       </div></div>`;
   });
+  h+=wo.exercises.length?`<button class="btn btn-outline log-add-ex" onclick="openExPicker('add')">+ Add exercise</button>`
+    :`<div class="empty" style="padding:30px 10px"><p>No exercises yet.</p><button class="btn btn-red btn-sm" style="margin-top:10px" onclick="openExPicker('add')">+ Add exercise</button></div>`;
   document.getElementById('log-body').innerHTML=h;
-  document.getElementById('log-ov').classList.add('open');
-  nat(P=>P.KeepAwake&&P.KeepAwake.keepAwake());
-  restoreDraft();
-  wo.exercises.forEach((ex,ei)=>refreshActiveSet(ei));
-  updateComp();
 }
+
+// Everything typed into the sheet, by position, so it survives a re-render
+const dWarm=(ei,si)=>document.getElementById(`lsn-${ei}-${si}`)?.classList.contains('warm')||false;
+function snapLog(){
+  return logWo.exercises.map((ex,ei)=>ex.type==='run'
+    ?{name:ex.name,isRun:true,runType:dv(`rt-${ei}`),runDistance:dv(`rd-${ei}`),runTime:dv(`rtt-${ei}`),done:dOn(`lc-${ei}-run`),notes:dv(`ln-${ei}`)}
+    :{name:ex.name,notes:dv(`ln-${ei}`),sets:ex.sets.map((st,si)=>({weight:dv(`lw-${ei}-${si}`),reps:dv(`lr-${ei}-${si}`),rpe:dv(`lrpe-${ei}-${si}`),done:dOn(`lc-${ei}-${si}`),warm:dWarm(ei,si)}))});
+}
+function applySnap(snap){
+  const setV=(id,v)=>{const el=document.getElementById(id);if(el&&v!=null)el.value=v;};
+  const setC=(id,v)=>{const el=document.getElementById(id);if(el)el.classList.toggle('on',!!v);};
+  (snap||[]).forEach((de,ei)=>{
+    if(!de||!logWo.exercises[ei])return;
+    if(de.isRun){setV(`rt-${ei}`,de.runType);setV(`rd-${ei}`,de.runDistance);setV(`rtt-${ei}`,de.runTime);setC(`lc-${ei}-run`,de.done);}
+    else (de.sets||[]).forEach((x,si)=>{if(!document.getElementById(`lr-${ei}-${si}`))return;
+      setV(`lw-${ei}-${si}`,x.weight);setV(`lr-${ei}-${si}`,x.reps);setV(`lrpe-${ei}-${si}`,x.rpe);setC(`lc-${ei}-${si}`,x.done);setWarmUI(ei,si,!!x.warm);});
+    setV(`ln-${ei}`,de.notes);
+  });
+}
+function rerenderLog(snap){renderLogBody();applySnap(snap);logWo.exercises.forEach((ex,ei)=>refreshActiveSet(ei));updateComp();queueDraft();}
+function setWarmUI(ei,si,on){
+  const n=document.getElementById(`lsn-${ei}-${si}`);if(!n)return;
+  n.classList.toggle('warm',on);n.textContent=on?'W':'S'+(si+1);
+  document.getElementById(`lsg-${ei}-${si}`)?.classList.toggle('is-warm',on);
+}
+function toggleWarm(ei,si){setWarmUI(ei,si,!dWarm(ei,si));if(dWarm(ei,si))track('warmup_marked');updateComp();queueDraft();}
+function addLogSet(ei){const snap=snapLog(),ex=logWo.exercises[ei];const last=ex.sets[ex.sets.length-1]||{weight:'',reps:''};ex.sets.push({weight:last.weight||'',reps:last.reps||''});
+  const ls=snap[ei].sets[snap[ei].sets.length-1];snap[ei].sets.push({weight:ls?.weight||'',reps:ls?.reps||'',rpe:'',done:false,warm:false});rerenderLog(snap);}
+function removeLogSet(ei){const snap=snapLog(),ex=logWo.exercises[ei];if(ex.sets.length<2)return;ex.sets.pop();snap[ei].sets.pop();rerenderLog(snap);}
+function removeLogEx(ei){
+  const ex=logWo.exercises[ei];if(!ex)return;
+  if(!confirm(`Remove ${ex.name} from this session? Your saved workout isn't changed.`))return;
+  const snap=snapLog();logWo.exercises.splice(ei,1);snap.splice(ei,1);stopTimer();rerenderLog(snap);
+}
+
+// ══ FINISH SCREEN ══
+let finData=null;
+function showFinish(ds,newPRs){
+  const logs=DB.logs(),log=logs[ds];if(!log)return;
+  const vol=calcVolume(log);
+  // Compare with the last time this workout (or one with the same name) was done
+  const prevDs=Object.keys(logs).filter(d=>d<ds&&(log.workoutId?logs[d].workoutId===log.workoutId:sameEx(logs[d].workoutName,log.workoutName))).sort().pop();
+  const prevVol=prevDs?calcVolume(logs[prevDs]):0;
+  // Only celebrate: a lighter day (deload, short on time) isn't called out here
+  const rawDelta=prevVol>0?Math.round((vol-prevVol)/prevVol*100):null;
+  const delta=rawDelta!==null&&rawDelta>0?rawDelta:null;
+  const sets=log.exercises.reduce((a,e)=>a+(e.isRun?0:workSets(e.sets).filter(x=>x.done).length),0);
+  const mins=log.startedAt&&log.finishedAt?Math.round((Date.parse(log.finishedAt)-Date.parse(log.startedAt))/60000):null;
+  const dur=mins&&mins>=3&&mins<=300?(mins>=60?`${Math.floor(mins/60)}h ${mins%60}m`:`${mins} min`):null;
+  const d=new Date(ds+'T12:00:00');
+  finData={name:log.workoutName,date:d.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'}),vol,delta,sets,dur,prs:newPRs,unit:UNIT()};
+  const tiles=[[sets,'Sets'],[vol>0?Math.round(vol).toLocaleString():'—',`Volume (${UNIT()})`],[dur||'—','Time']];
+  document.getElementById('fin-body').innerHTML=`
+    <div class="fin-kicker">Workout complete</div>
+    <div class="fin-name">${esc(log.workoutName)}</div>
+    <div class="fin-date">${finData.date}</div>
+    <div class="fin-tiles">${tiles.map(([v,l])=>`<div class="fin-tile"><div class="fin-val">${v}</div><div class="fin-lbl">${l}</div></div>`).join('')}</div>
+    ${delta!==null?`<div class="fin-delta ${delta>=0?'up':'down'}">${delta>=0?'▲':'▼'} ${Math.abs(delta)}% volume vs last ${esc(log.workoutName)}</div>`:''}
+    ${newPRs.length?`<div class="fin-prs"><div class="fin-prs-hdr">${newPRs.length} new PR${newPRs.length>1?'s':''}</div>${newPRs.map(p=>`<div class="fin-pr"><span>${esc(p.name)}</span><span>${p.weight}${UNIT()} × ${p.reps}</span></div>`).join('')}</div>`:''}`;
+  document.getElementById('fin-ov').classList.add('open');
+  nat(P=>P.Haptics&&P.Haptics.notification({type:'SUCCESS'}));
+}
+function closeFinish(){document.getElementById('fin-ov').classList.remove('open');}
+async function finishImage(){
+  const f=finData;if(!f)return null;
+  await Promise.all(["600 80px 'Saira Semi Condensed'","300 40px 'Manrope'","500 40px 'Manrope'","600 40px 'Manrope'"].map(x=>document.fonts.load(x).catch(()=>{})));
+  const W=1080,H=1350,c=document.createElement('canvas');c.width=W;c.height=H;const g=c.getContext('2d');
+  const bg=g.createRadialGradient(W*0.3,0,50,W*0.5,H*0.4,H);bg.addColorStop(0,'#2a3038');bg.addColorStop(0.5,'#14171b');bg.addColorStop(1,'#0a0b0d');g.fillStyle=bg;g.fillRect(0,0,W,H);
+  const P=88;let y=150;
+  g.fillStyle='#e6ebf0';g.font="300 44px 'Manrope'";g.textBaseline='alphabetic';
+  if('letterSpacing' in g)g.letterSpacing='18px';g.fillText('WORK',P,y);if('letterSpacing' in g)g.letterSpacing='0px';
+  y+=120;g.fillStyle='#7c8692';g.font="600 30px 'Manrope'";g.fillText('WORKOUT COMPLETE',P,y);
+  y+=96;g.fillStyle='#eef2f6';g.font="600 92px 'Saira Semi Condensed'";
+  let nm=f.name;while(g.measureText(nm).width>W-2*P&&nm.length>4)nm=nm.slice(0,-2)+'…';g.fillText(nm,P,y);
+  y+=58;g.fillStyle='#a9b1bb';g.font="400 36px 'Manrope'";g.fillText(f.date,P,y);
+  y+=90;const tw=(W-2*P-2*28)/3;
+  [[String(f.sets),'SETS'],[f.vol>0?Math.round(f.vol).toLocaleString():'—','VOLUME ('+f.unit.toUpperCase()+')'],[f.dur||'—','TIME']].forEach(([v,l],i)=>{
+    const x=P+i*(tw+28);g.fillStyle='#14171b';g.strokeStyle='#262b32';g.lineWidth=2;
+    if(g.roundRect){g.beginPath();g.roundRect(x,y,tw,190,14);g.fill();g.stroke();}else{g.fillRect(x,y,tw,190);g.strokeRect(x,y,tw,190);}
+    g.fillStyle='#eef2f6';g.font="300 64px 'Manrope'";g.textAlign='center';g.fillText(v,x+tw/2,y+105);
+    g.fillStyle='#7c8692';g.font="600 22px 'Manrope'";g.fillText(l,x+tw/2,y+155);g.textAlign='left';});
+  y+=250;
+  if(f.delta!==null){g.fillStyle=f.delta>=0?'#7fd1b9':'#ef7a7a';g.font="600 36px 'Manrope'";g.fillText(`${f.delta>=0?'▲':'▼'} ${Math.abs(f.delta)}% volume vs last time`,P,y);y+=80;}
+  if(f.prs.length){
+    g.fillStyle='#e8c27a';g.font="600 30px 'Manrope'";g.fillText(`${f.prs.length} NEW PR${f.prs.length>1?'S':''}`,P,y);y+=24;
+    f.prs.slice(0,4).forEach(pr=>{y+=70;g.strokeStyle='#262b32';g.beginPath();g.moveTo(P,y-50);g.lineTo(W-P,y-50);g.stroke();
+      g.fillStyle='#eef2f6';g.font="500 38px 'Manrope'";let n=pr.name;while(g.measureText(n).width>W-2*P-300&&n.length>4)n=n.slice(0,-2)+'…';g.fillText(n,P,y);
+      g.textAlign='right';g.fillStyle='#e6ebf0';g.font="600 38px 'Manrope'";g.fillText(`${pr.weight}${f.unit} × ${pr.reps}`,W-P,y);g.textAlign='left';});
+  }
+  g.fillStyle='#4b535d';g.font="500 28px 'Manrope'";g.fillText('workliftlog.com',P,H-80);
+  return c;
+}
+async function shareFinish(){
+  const btn=document.getElementById('fin-share');const label=btn.textContent;btn.textContent='Preparing…';
+  try{
+    const c=await finishImage();if(!c)return;
+    const text=`${finData.name}: ${finData.sets} sets${finData.prs.length?`, ${finData.prs.length} PR${finData.prs.length>1?'s':''}`:''}. Logged with WORK.`;
+    if(NP()&&NP().Filesystem&&NP().Share){
+      const b64=c.toDataURL('image/png').split(',')[1];
+      const f=await NP().Filesystem.writeFile({path:'work-session.png',data:b64,directory:'CACHE'});
+      await NP().Share.share({title:'My workout',text,url:f.uri});
+    }else{
+      const blob=await new Promise(r=>c.toBlob(r,'image/png'));
+      const file=new File([blob],'work-session.png',{type:'image/png'});
+      if(navigator.canShare&&navigator.canShare({files:[file]}))await navigator.share({files:[file],text});
+      else{const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='work-session.png';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),4000);}
+    }
+    track('finish_share',{prs:finData.prs.length});
+  }catch(e){if(e&&e.name!=='AbortError')console.warn('share',e);}
+  finally{btn.textContent=label;}
+}
+
+// ══ EXERCISE PICKER (swap, add) ══
+let xpMode='add',xpIndex=-1;
+function knownExercises(){
+  // Your own exercises first (most recently used), then the built-in list
+  const seen=new Set(),mine=[];
+  const logs=DB.logs();
+  Object.keys(logs).sort((a,b)=>b.localeCompare(a)).forEach(ds=>(logs[ds].exercises||[]).forEach(e=>{const n=normName(e.name);if(n&&!seen.has(n)){seen.add(n);mine.push(cleanName(e.name));}}));
+  DB.workouts().forEach(w=>(w.exercises||[]).forEach(e=>{const n=normName(e.name);if(n&&!seen.has(n)&&e.name!=='— Select Exercise —'){seen.add(n);mine.push(cleanName(e.name));}}));
+  const lib=LIB.slice(1).filter(n=>!seen.has(normName(n)));
+  return{mine,lib};
+}
+function openExPicker(mode,ei){
+  xpMode=mode;xpIndex=ei??-1;
+  const cur=mode==='swap'?logWo.exercises[ei]?.name:'';
+  document.getElementById('xp-title').textContent=mode==='swap'?`Swap ${cur} for…`:'Add exercise';
+  const q=document.getElementById('xp-q');q.value='';
+  renderExPicker();
+  document.getElementById('xp-ov').classList.add('open');
+  setTimeout(()=>q.focus(),60);
+}
+function closeExPicker(){document.getElementById('xp-ov').classList.remove('open');}
+function renderExPicker(){
+  const q=normName(document.getElementById('xp-q').value);
+  const {mine,lib}=knownExercises();
+  const hit=n=>!q||normName(n).includes(q);
+  const cur=xpMode==='swap'?normName(logWo.exercises[xpIndex]?.name):'';
+  const item=n=>`<div class="xp-item" onclick="pickExercise(this.dataset.n)" data-n="${esc(n)}"><span>${esc(n)}</span><span class="xp-mg">${muscleFor(n)}</span></div>`;
+  const m=mine.filter(n=>hit(n)&&normName(n)!==cur),l=lib.filter(n=>hit(n)&&normName(n)!==cur);
+  // Same muscle group first when swapping
+  if(xpMode==='swap'){const g=muscleFor(logWo.exercises[xpIndex]?.name);const sm=(a,b)=>(muscleFor(b)===g)-(muscleFor(a)===g);m.sort(sm);l.sort(sm);}
+  let h='';
+  const typed=document.getElementById('xp-q').value.trim();
+  if(typed&&![...mine,...lib].some(n=>sameEx(n,typed)))h+=`<div class="xp-item xp-new" onclick="pickExercise(this.dataset.n)" data-n="${esc(cleanName(typed))}"><span>+ Add “${esc(cleanName(typed))}”</span></div>`;
+  if(m.length)h+=`<div class="xp-sec">Your exercises</div>`+m.map(item).join('');
+  if(l.length)h+=`<div class="xp-sec">All exercises</div>`+l.map(item).join('');
+  if(!h)h=`<div class="xp-sec">No matches</div>`;
+  document.getElementById('xp-list').innerHTML=h;
+}
+function pickExercise(name){
+  name=cleanName(name);if(!name)return;
+  const snap=snapLog();
+  if(xpMode==='swap'&&logWo.exercises[xpIndex]){
+    const ex=logWo.exercises[xpIndex],from=ex.name,type=typeFor(name,ex.type);
+    ex.name=name;ex.muscle='';ex._isAlt=false;
+    if(type!==ex.type){ex.type=type;ex.sets=type==='run'?[]:(ex.sets.length?ex.sets:[{weight:'',reps:''},{weight:'',reps:''},{weight:'',reps:''}]);}
+    ex.sets=ex.sets.map(st=>({weight:'',reps:st.reps||''}));
+    snap[xpIndex]=null;   // fresh boxes, prefilled from the new exercise's own history
+    track('exercise_swap',{from:normName(from),to:normName(name)});
+  }else{
+    logWo.exercises.push(newSessionEx(name,typeFor(name,'lift')));snap.push(null);
+    track('exercise_add',{name:normName(name),quick:!!logWo.quick});
+  }
+  closeExPicker();rerenderLog(snap);
+}
+
+// ══ QUICK WORKOUT ══
+function openQuickStart(){
+  const ws=DB.workouts();
+  document.getElementById('qs-list').innerHTML=`<div class="xp-item" onclick="startQuick()"><span><strong>Empty workout</strong><br><span class="xp-mg" style="margin:0">Add exercises as you go</span></span></div>`
+    +(ws.length?`<div class="xp-sec">Or start from a saved workout</div>`+ws.map(w=>`<div class="xp-item" onclick="startQuick('${w.id}')"><span>${esc(w.name)}</span><span class="xp-mg">${w.exercises.length} exercises</span></div>`).join(''):'');
+  document.getElementById('qs-ov').classList.add('open');
+}
+function closeQuickStart(){document.getElementById('qs-ov').classList.remove('open');}
+function startQuick(woId){closeQuickStart();track('quick_start',{from_saved:!!woId});openLog(todayStr(),woId?{woId}:{quick:true});}
 
 // Show the quick +/- weight buttons only for one set per exercise: the one you're on
 function setActiveSet(ei,si){
@@ -1817,7 +2125,7 @@ function toggleSet(ei,si){
   const el=document.getElementById(`lc-${ei}-${si}`);
   if(!el)return;
   el.classList.toggle('on');
-  if(el.classList.contains('on')){nat(P=>P.Haptics&&P.Haptics.impact({style:'MEDIUM'}));startTimer(ei,si);}
+  if(el.classList.contains('on')){if(logWo&&!logWo._started)logWo._started=Date.now();nat(P=>P.Haptics&&P.Haptics.impact({style:'MEDIUM'}));startTimer(ei,si);}
   else if(document.getElementById(`tbtn-${ei}-${si}`)?.classList.contains('running'))stopTimer();
   refreshActiveSet(ei);
   updateComp();
@@ -1831,22 +2139,14 @@ const dv=id=>document.getElementById(id)?.value||'';
 const dOn=id=>document.getElementById(id)?.classList.contains('on')||false;
 
 function saveDraft(){
-  if(!logDate)return;
-  const wo=getWorkoutForDate(logDate);if(!wo)return;
-  const d={date:logDate,ts:Date.now(),ex:[]};
-  wo.exercises.forEach((ex,ei)=>{
-    if(ex.type==='run'){
-      d.ex.push({name:ex.name,isRun:true,runType:dv(`rt-${ei}`),runDistance:dv(`rd-${ei}`),runTime:dv(`rtt-${ei}`),done:dOn(`lc-${ei}-run`),notes:dv(`ln-${ei}`)});
-    }else{
-      d.ex.push({name:ex.name,notes:dv(`ln-${ei}`),sets:ex.sets.map((st,si)=>({weight:dv(`lw-${ei}-${si}`),reps:dv(`lr-${ei}-${si}`),rpe:dv(`lrpe-${ei}-${si}`),done:dOn(`lc-${ei}-${si}`)}))});
-    }
-  });
+  if(!logDate||!logWo)return;
+  const d={date:logDate,ts:Date.now(),wo:logWo,ex:snapLog()};
   try{localStorage.setItem(draftKey(),JSON.stringify(d));}catch(e){}
 }
 function queueDraft(){clearTimeout(draftTimer);draftTimer=setTimeout(saveDraft,400);}
 function getDraft(){try{return JSON.parse(localStorage.getItem(draftKey()));}catch{return null}}
 function clearDraft(){try{localStorage.removeItem(draftKey());}catch(e){}}
-function discardDraft(){const d=logDate;clearDraft();closeLog();openLog(d);}
+function discardDraft(){const d=logDate,o=logOpts;clearDraft();closeLog();openLog(d,o);}
 
 // Lay draft values over the freshly rendered inputs. Matched by exercise name.
 function restoreDraft(){
@@ -1855,23 +2155,13 @@ function restoreDraft(){
   if(!d||d.date!==logDate)return;
   const saved=DB.logs()[logDate];
   if(saved&&saved.savedAt&&Date.parse(saved.savedAt)>=d.ts){clearDraft();return;}
-  const wo=getWorkoutForDate(logDate);if(!wo)return;
-  const setV=(id,v)=>{const el=document.getElementById(id);if(el&&v!==''&&v!=null)el.value=v;};
-  const setC=(id,v)=>{const el=document.getElementById(id);if(el&&v)el.classList.add('on');};
-  wo.exercises.forEach((ex,ei)=>{
-    const de=(d.ex||[]).find(e=>e.name===ex.name);
-    if(!de)return;
-    if(de.isRun){
-      setV(`rt-${ei}`,de.runType);setV(`rd-${ei}`,de.runDistance);setV(`rtt-${ei}`,de.runTime);
-      setC(`lc-${ei}-run`,de.done);
-    }else{
-      (de.sets||[]).forEach((ds,si)=>{setV(`lw-${ei}-${si}`,ds.weight);setV(`lr-${ei}-${si}`,ds.reps);setV(`lrpe-${ei}-${si}`,ds.rpe);setC(`lc-${ei}-${si}`,ds.done);});
-    }
-    setV(`ln-${ei}`,de.notes);
-  });
+  if(d.wo)applySnap(d.ex);
+  else{   // drafts from before sessions kept their own list: match by name
+    applySnap(logWo.exercises.map(ex=>(d.ex||[]).find(e=>sameEx(e.name,ex.name))||null));
+  }
   draftRestored=true;
   document.getElementById('log-body').insertAdjacentHTML('afterbegin',
-    `<div class="draft-notice"><span>\u26a0</span><span style="flex:1">Restored entries you hadn't saved yet. Tap Save Log to keep them.</span><span onclick="discardDraft()" style="text-decoration:underline;cursor:pointer;flex-shrink:0">Discard</span></div>`);
+    `<div class="draft-notice"><span>\u26a0</span><span style="flex:1">Restored entries you hadn't saved yet. Tap Save Session to keep them.</span><span onclick="discardDraft()" style="text-decoration:underline;cursor:pointer;flex-shrink:0">Discard</span></div>`);
 }
 
 function manualSync(){syncFromSupabase();}
@@ -1886,7 +2176,7 @@ function adjustWeight(ei,si,delta){
 }
 
 function updateComp(){
-  const wo=logDate?getWorkoutForDate(logDate):null;if(!wo)return;
+  const wo=logWo;if(!wo)return;
   let total=0,done=0,hasRun=false;
   wo.exercises.forEach((ex,ei)=>{
     if(ex.type==='run'){
@@ -1906,37 +2196,55 @@ function updateComp(){
 }
 
 function saveLog(){
-  if(!logDate)return;
-  const wo=getWorkoutForDate(logDate);if(!wo)return;
-  const logs=DB.logs(),prs=DB.prs();
-  const priorBest=bestsExcluding(logDate);
+  if(!logDate||!logWo)return;
+  const wo=logWo,ds=logDate;
+  const logs=DB.logs(),prs=DB.prs(),prev=logs[ds];
+  const priorBest=bestsExcluding(ds);
+  const newPRs=[];
   const exercises=wo.exercises.map((ex,ei)=>{
     const isRun=ex.type==='run',isBW=ex.type==='bw';
+    const name=cleanName(ex.name);
     const notes=document.getElementById(`ln-${ei}`)?.value||'';
-    if(isRun)return{name:ex.name,isRun:true,muscle:'Cardio',runType:document.getElementById(`rt-${ei}`)?.value||'',runDistance:document.getElementById(`rd-${ei}`)?.value||'',runTime:document.getElementById(`rtt-${ei}`)?.value||'',done:document.getElementById(`lc-${ei}-run`)?.classList.contains('on')||false,notes};
-    const sets=ex.sets.map((s,si)=>{
-      const w=isBW?'BW':(document.getElementById(`lw-${ei}-${si}`)?.value||'');
-      const r=document.getElementById(`lr-${ei}-${si}`)?.value||'';
-      const done=document.getElementById(`lc-${ei}-${si}`)?.classList.contains('on')||false;
+    if(isRun)return{name,isRun:true,muscle:'Cardio',runType:dv(`rt-${ei}`),runDistance:dv(`rd-${ei}`),runTime:dv(`rtt-${ei}`),done:dOn(`lc-${ei}-run`),notes};
+    const n=normName(name),key=canonName(name),oldKey=Object.keys(prs).find(k=>sameEx(k,name));
+    if(oldKey&&oldKey!==key){prs[key]=prs[oldKey];delete prs[oldKey];}
+    const sets=ex.sets.map((st,si)=>{
+      const w=isBW?'BW':dv(`lw-${ei}-${si}`);
+      const r=dv(`lr-${ei}-${si}`);
+      const done=dOn(`lc-${ei}-${si}`),warm=dWarm(ei,si);
       let isPR=false;
-      if(!isBW&&w&&r){
+      if(!isBW&&!warm&&w&&r){
         const E=e1rm(w,r);
         // Ignore a stored record that came from this same session, so re-saving re-flags it
-        const stored=prs[ex.name];
-        const bar=Math.max(priorBest[ex.name]||0,(stored&&stored.date!==logDate)?prE1(stored):0);
+        const stored=prs[key];
+        const bar=Math.max(priorBest[n]||0,(stored&&stored.date!==ds)?prE1(stored):0);
         if(E>0&&E>bar+0.05){
-          isPR=true;priorBest[ex.name]=E;
-          prs[ex.name]={weight:w,reps:r,date:logDate,workoutName:wo.name,e1rm:fmtE(E)};
+          isPR=true;priorBest[n]=E;
+          prs[key]={weight:w,reps:r,date:ds,workoutName:wo.name,e1rm:fmtE(E)};
         }
       }
-      const rpe=document.getElementById(`lrpe-${ei}-${si}`)?.value||'';
-      return{weight:w,reps:r,rpe,done,pr:isPR};
+      const out={weight:w,reps:r,rpe:dv(`lrpe-${ei}-${si}`),done,pr:isPR};
+      if(warm)out.warm=true;
+      return out;
     });
-    return{name:ex.name,isBW,muscle:muscleFor(ex.name,ex.muscle),sets,notes};
+    // Only the session's best PR per exercise is worth celebrating
+    const best=sets.filter(x=>x.pr).pop();if(best)newPRs.push({name,weight:best.weight,reps:best.reps,e1rm:fmtE(e1rm(best.weight,best.reps))});
+    return{name,isBW,muscle:muscleFor(name,ex.muscle),sets,notes};
   });
-  logs[logDate]={workoutId:wo.id,workoutName:wo.name,exercises,savedAt:new Date().toISOString()};
+  const now=new Date().toISOString();
+  const startedAt=wo._started?new Date(wo._started).toISOString():(prev&&prev.startedAt)||null;
+  logs[ds]={workoutId:wo.id||null,workoutName:wo.name,exercises,savedAt:now};
+  if(wo.quick)logs[ds].quick=true;
+  if(startedAt){logs[ds].startedAt=startedAt;logs[ds].finishedAt=prev?.finishedAt&&prev.startedAt===startedAt?prev.finishedAt:now;}
   DB.sl(logs);DB.sr(prs);
+  const log=logs[ds];
+  const workDone=exercises.reduce((a,e)=>a+(e.isRun?(e.done?1:0):workSets(e.sets).filter(x=>x.done).length),0);
+  const firstSave=!prev||!(prev.exercises||[]).some(e=>e.done||(e.sets||[]).some(x=>x.done));
+  track('workout_save',{sets:workDone,exercises:exercises.length,quick:!!wo.quick,prs:newPRs.length,
+    warmups:exercises.reduce((a,e)=>a+(e.sets||[]).filter(x=>x.warm).length,0),
+    minutes:startedAt?Math.round((Date.parse(log.finishedAt)-Date.parse(startedAt))/60000):null,first:firstSave});
   clearDraft();stopTimer();closeLog();renderToday();
+  if(firstSave&&workDone>0)showFinish(ds,newPRs);
 }
 function closeLog(){document.getElementById('log-ov').classList.remove('open');logDate=null;nat(P=>P.KeepAwake&&P.KeepAwake.allowSleep());}
 
@@ -1946,8 +2254,7 @@ const TIMER_SECS=90;
 
 function startTimer(ei,si){
   stopTimer();
-  const wo=logDate?getWorkoutForDate(logDate):null;
-  const exRest=(wo?.exercises?.[ei]?.restTime)||TIMER_SECS;
+  const exRest=(logWo?.exercises?.[ei]?.restTime)||TIMER_SECS;
   timerTotal=exRest;timerLeft=exRest;timerEnd=Date.now()+exRest*1000;
   nat(P=>P.LocalNotifications&&P.LocalNotifications.requestPermissions().then(()=>P.LocalNotifications.schedule({notifications:[{id:1001,title:'Rest is up',body:'Time for your next set.',schedule:{at:new Date(timerEnd),allowWhileIdle:true}}]})));
   document.querySelectorAll('.timer-btn').forEach(b=>b.classList.remove('running'));
@@ -2143,6 +2450,7 @@ function saveWorkout(){
   syncED();
   if(!EW.name.trim()){alert('Give your workout a name');return;}
   EW.exercises=EW.exercises.filter(e=>e.name&&e.name.trim()&&e.name!=='— Select Exercise —');
+  EW.exercises.forEach(e=>{e.name=cleanName(e.name);if(e.altName)e.altName=cleanName(e.altName);});
   if(!EW.exercises.length){alert('Add at least one exercise');return;}
   const ws=DB.workouts(),idx=ws.findIndex(w=>w.id===EW.id);
   if(idx>=0)ws[idx]=EW;else ws.push(EW);
@@ -2402,7 +2710,7 @@ function volWindow(offset){
       const g=muscleFor(ex.name,ex.muscle);
       out[g]=out[g]||{sets:0,vol:0,rpe:[]};
       if(ex.isRun){if(ex.done)out[g].sets+=1;return;}
-      (ex.sets||[]).forEach(st=>{
+      workSets(ex.sets).forEach(st=>{
         if(!st.done)return;
         out[g].sets+=1;
         const w=parseFloat(st.weight)||0,r=parseInt(st.reps)||0;
@@ -2473,7 +2781,7 @@ function renderHLogs(){
   if(!dates.length){c.innerHTML=`<div class="empty"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><p>No sessions logged yet.</p></div>`;return;}
   c.innerHTML=dates.map(ds=>{
     const log=logs[ds],d=new Date(ds+'T12:00:00');
-    const sets=log.exercises.filter(e=>!e.isRun).reduce((a,e)=>a+(e.sets?.filter(s=>s.done).length||0),0);
+    const sets=log.exercises.filter(e=>!e.isRun).reduce((a,e)=>a+(workSets(e.sets).filter(s=>s.done).length||0),0);
     const prs=log.exercises.reduce((a,e)=>a+(e.sets?.filter(s=>s.pr).length||0),0);
     const hasRun=log.exercises.some(e=>e.isRun);
     const vol=calcVolume(log);
@@ -2492,7 +2800,7 @@ function renderHLogs(){
         ${log.exercises.map(ex=>`<div class="hist-ex">
           <div class="hist-ex-name">${ex.name}${ex.isRun?' <span class="tag tag-purple" style="font-size:0.5rem">Run</span>':ex.isBW?' <span class="tag tag-green" style="font-size:0.5rem">BW</span>':''}</div>
           ${ex.isRun?`<div class="hist-set">${[ex.runType,ex.runDistance,ex.runTime].filter(Boolean).join(' · ')||'—'} ${ex.done?'✓':''}</div>`
-            :(ex.sets||[]).map((s,i)=>`<div class="hist-set">S${i+1}: ${ex.isBW?'BW':((s.weight||'—')+UNIT())} × ${s.reps||'—'}${s.rpe?` @${s.rpe}`:''} ${s.done?'✓':''} ${s.pr?'<span class="pr-badge">PR</span>':''}</div>`).join('')}
+            :(ex.sets||[]).map((s,i)=>`<div class="hist-set">${s.warm?'W':'S'+(i+1)}: ${ex.isBW?'BW':((s.weight||'—')+UNIT())} × ${s.reps||'—'}${s.rpe?` @${s.rpe}`:''} ${s.done?'✓':''} ${s.pr?'<span class="pr-badge">PR</span>':''}</div>`).join('')}
           ${ex.notes?`<div style="font-size:0.68rem;font-style:italic;color:var(--muted);margin-top:2px">${ex.notes}</div>`:''}
         </div>`).join('')}
       </div>
@@ -2536,7 +2844,7 @@ function deletePR(exName){
 
 let editingPR=null;
 function openPREdit(exName){
-  const pr=DB.prs()[exName];if(!pr)return;
+  const pr=prFor(exName);if(!pr)return;
   editingPR=exName;
   document.getElementById('pre-title').textContent=exName;
   document.getElementById('pre-w').value=pr.weight||'';
@@ -2586,9 +2894,9 @@ function recalcAllPRs(){
 function renderCharts(){
   const logs=DB.logs();
   // Build list of all exercises logged
-  const exSet=new Set();
-  Object.values(logs).forEach(log=>log.exercises.filter(e=>!e.isRun&&!e.isBW).forEach(e=>exSet.add(e.name)));
-  const exercises=[...exSet].sort();
+  const byNorm={};
+  Object.keys(logs).sort().forEach(ds=>logs[ds].exercises.filter(e=>!e.isRun&&!e.isBW).forEach(e=>{byNorm[normName(e.name)]=canonName(e.name);}));
+  const exercises=Object.values(byNorm).sort();
   const c=document.getElementById('h-charts');
   if(!exercises.length){c.innerHTML=`<div class="empty"><p>No lift data yet. Start logging to see progress charts.</p></div>`;return;}
   c.innerHTML=`<div class="field"><label>Exercise</label>
@@ -2603,7 +2911,7 @@ function renderCharts(){
 }
 
 function renderExChart(exName){
-  const sel=document.getElementById('chart-ex-select');if(sel)sel.value=exName;
+  const sel=document.getElementById('chart-ex-select');if(sel){const o=[...sel.options].find(o=>sameEx(o.value,exName));if(o)sel.value=o.value;}
   const logs=DB.logs();
   const dates=Object.keys(logs).sort();
   const points=[];
@@ -2611,11 +2919,12 @@ function renderExChart(exName){
   const e1Points=[];
   dates.forEach(ds=>{
     const log=logs[ds];
-    const ex=log.exercises.find(e=>e.name===exName&&!e.isRun);
+    const ex=log.exercises.find(e=>sameEx(e.name,exName)&&!e.isRun);
     if(!ex)return;
-    const maxW=Math.max(...ex.sets.map(s=>parseFloat(s.weight)||0));
-    const bestE=Math.max(...ex.sets.map(s=>e1rm(s.weight,s.reps)));
-    const vol=ex.sets.filter(s=>s.done).reduce((a,s)=>{const w=parseFloat(s.weight)||0,r=parseInt(s.reps)||0;return a+w*r;},0);
+    const ws=workSets(ex.sets);if(!ws.length)return;
+    const maxW=Math.max(...ws.map(s=>parseFloat(s.weight)||0));
+    const bestE=Math.max(...ws.map(s=>e1rm(s.weight,s.reps)));
+    const vol=ws.filter(s=>s.done).reduce((a,s)=>{const w=parseFloat(s.weight)||0,r=parseInt(s.reps)||0;return a+w*r;},0);
     if(maxW>0)points.push({ds,val:maxW});
     if(bestE>0)e1Points.push({ds,val:fmtE(bestE)});
     if(vol>0)volPoints.push({ds,val:vol});
@@ -2767,6 +3076,8 @@ if(!navigator.onLine)syncState='offline';
 renderAccount();
 renderSyncBadge();
 if(!isSignedIn())showLoginGate();
+else track('app_open');
+window.addEventListener('online',flushEvents);
 syncFromSupabase().then(()=>{renderToday();if(authNeeded)showLoginGate();});
 </script>
 </body>
