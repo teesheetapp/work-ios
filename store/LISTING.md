@@ -44,6 +44,7 @@ Paste these into App Store Connect. Character limits are Apple's.
 **Keywords** (100, comma-separated, no spaces):
 `workout,gym,lifting,weightlifting,strength,training,log,tracker,PR,1RM,rest timer,powerlifting,sets,reps`
 
+**Support email:** `support@workliftlog.com`
 **Support URL:** `https://teesheetapp.github.io/Fitness-Tracker/lift-log/support.html`
 **Privacy Policy URL:** `https://teesheetapp.github.io/Fitness-Tracker/lift-log/privacy.html`
 **Marketing URL:** leave blank
@@ -64,8 +65,7 @@ Everything else: Not collected.
 
 ## App Review information
 - **Sign-in required:** Yes. Provide a demo account:
-  - Email / password: create one in Supabase → Authentication → Users → Add user (auto-confirm), e.g. `review@<your domain>`
-  - Sign in once in the app and use **Settings → Your data → Import** with `store/demo-backup.json` so the reviewer sees real history
+  - Email / password: create one in Supabase → Authentication → Users → Add user (auto-confirm), `review@workliftlog.com` (already created and loaded with demo data)
 - **Notes for the reviewer:**
 > WORK is a strength training log. Sign in with the demo account above, which has 10 weeks of sample training. To see the core flow: Today → Log This Workout → check off a set (the rest timer starts and a local notification fires when rest ends) → Save Session. History shows PRs and charts. Account deletion: Settings → Account → Delete account. The app uses only standard HTTPS encryption.
-- **Contact:** your name, phone, email
+- **Contact:** Walker, your phone, support@workliftlog.com

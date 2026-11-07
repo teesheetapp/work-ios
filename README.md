@@ -58,7 +58,4 @@ Bump the build number (`CURRENT_PROJECT_VERSION` in `ios/App/App.xcodeproj/proje
 
 ## Before the public release
 
-- **Email:** Supabase → Authentication → Emails → SMTP Settings → use Resend (`smtp.resend.com`, port 465, user `resend`, password = a Resend API key, sender on a domain verified in Resend). Then turn **Confirm email** back on.
-- **Email templates:** in *Confirm signup* and *Reset password*, include `{{ .Token }}` so the email shows the 6-digit code the app asks for.
-- **Leaked password protection:** Authentication → Attack Protection → on.
-- **Support email:** add a real address to `support.html` and the App Store listing.
+Done: sign-up and reset emails send from `noreply@workliftlog.com` through Resend with 6-digit codes; Confirm email is on; leaked password protection is on; `support@workliftlog.com` forwards via ImprovMX; App Review demo account `review@workliftlog.com` is loaded.
