@@ -4,7 +4,7 @@
   "private": true,
   "description": "WORK: Lift Log iPhone app (Capacitor shell around www/)",
   "scripts": {
-    "build": "echo \"www/ is static; nothing to build\"",
+    "build": "cap sync ios",
     "sync": "cap sync ios"
   },
   "dependencies": {
