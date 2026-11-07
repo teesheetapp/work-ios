@@ -2,7 +2,7 @@
 
 The App Store version of WORK. `www/` is the app itself (one HTML file plus fonts). `ios/` is the native iPhone shell made with Capacitor 8, which adds rest-timer notifications, haptics, and keep-screen-awake.
 
-- **Bundle ID:** `golf.teeflow.liftlog`
+- **Bundle ID:** `com.workliftlog.app`
 - **Backend:** Supabase project `nirvqwuqmwjheilscyyi`, table `user_data` (one row per user and key, row-level security per user) and `delete_account()` for in-app account deletion
 - **Test build on the web:** https://teesheetapp.github.io/Fitness-Tracker/lift-log/
 - **Privacy / Terms / Support pages:** https://teesheetapp.github.io/Fitness-Tracker/lift-log/privacy.html (also `terms.html`, `support.html`)
@@ -23,7 +23,7 @@ Enroll at developer.apple.com/programs/enroll ($99/year). Wait for approval.
 ### 2. App ID
 developer.apple.com → Certificates, Identifiers & Profiles → **Identifiers → +** → App IDs → App.
 - Description: `WORK Lift Log`
-- Bundle ID (Explicit): `golf.teeflow.liftlog`
+- Bundle ID (Explicit): `com.workliftlog.app`
 - No extra capabilities needed (local notifications don't require Push).
 
 ### 3. Distribution certificate (.p12)
@@ -32,12 +32,12 @@ developer.apple.com → Certificates, Identifiers & Profiles → **Identifiers �
 3. Back in the generator, turn the `.cer` into a `.p12` with a password. Save the `.p12` and password somewhere safe.
 
 ### 4. Provisioning profile
-Apple portal → **Profiles → +** → **App Store Connect** (Distribution) → App ID `golf.teeflow.liftlog` → the certificate from step 3 → name `WORK App Store` → download the `.mobileprovision`.
+Apple portal → **Profiles → +** → **App Store Connect** (Distribution) → App ID `com.workliftlog.app` → the certificate from step 3 → name `WORK App Store` → download the `.mobileprovision`.
 
 ### 5. App record in App Store Connect
 appstoreconnect.apple.com → **Apps → + → New App**
 - Platform: iOS · Name: `WORK: Lift Log` · Language: English (U.S.)
-- Bundle ID: `golf.teeflow.liftlog` · SKU: `work-lift-log`
+- Bundle ID: `com.workliftlog.app` · SKU: `work-lift-log`
 - If the name is taken, try `WORK — Lift Log` or `WORK Lift Log`.
 
 ### 6. App Store Connect API key (lets the cloud upload builds)
