@@ -331,6 +331,7 @@ label{font-size:0.65rem;color:var(--muted2);letter-spacing:.8px;text-transform:u
 .set-tools{display:flex;gap:16px;align-items:center;flex-wrap:wrap;font-size:0.72rem;margin:2px 0 4px}
 .set-tip{margin-left:auto;font-size:0.62rem;color:var(--muted)}
 .log-add-ex{width:100%;margin:4px 0 8px;padding:11px}
+.extra-sess{margin-top:10px}
 .quick-row{margin-top:10px}.quick-row .btn{width:100%;padding:11px}
 .xp-ov{z-index:400}
 .xp-modal{height:86vh}
@@ -1194,7 +1195,7 @@ function recomputePRs(){
         const E=e1rm(st.weight,st.reps);
         if(E<=0)return;
         if(!out[k]||E>prE1(out[k])+0.05)
-          out[k]={weight:st.weight,reps:st.reps,date:ds,workoutName:log.workoutName||'',e1rm:fmtE(E)};
+          out[k]={weight:st.weight,reps:st.reps,date:dateOf(ds),workoutName:log.workoutName||'',e1rm:fmtE(E)};
       });
     });
   });
@@ -1288,6 +1289,11 @@ const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2);
 const p2=n=>String(n).padStart(2,'0');
 const todayStr=()=>{const d=new Date();return`${d.getFullYear()}-${p2(d.getMonth()+1)}-${p2(d.getDate())}`};
 const dateStr=d=>`${d.getFullYear()}-${p2(d.getMonth()+1)}-${p2(d.getDate())}`;
+// A day's first workout is saved under its date; a 2nd, 3rd... under 'date#2', 'date#3'
+const dateOf=k=>String(k||'').slice(0,10);
+const sessionNum=k=>{const m=/#(\d+)$/.exec(String(k));return m?+m[1]:1;};
+const sessionKeys=(logs,ds)=>Object.keys(logs).filter(k=>dateOf(k)===ds).sort((a,b)=>sessionNum(a)-sessionNum(b));
+const nextSessionKey=(logs,ds)=>{if(!logs[ds])return ds;let n=2;while(logs[`${ds}#${n}`])n++;return `${ds}#${n}`;};
 const chkSvg=`<svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>`;
 // RPE is how the set felt today, so it is never carried over from last session
 const RPE_VALS=['','6','6.5','7','7.5','8','8.5','9','9.5','10'];
@@ -1329,6 +1335,7 @@ function startProgram(key){
 
 function getActivePhase(){const id=DB.ap();return DB.phases().find(p=>p.id===id)||null;}
 function getWeekNumber(ds){
+  ds=dateOf(ds);
   // Returns 1-based week number within active phase (week 1, 2, 3...)
   const phase=getActivePhase();if(!phase)return 1;
   const d=new Date(ds+'T12:00:00'),start=new Date(phase.startDate+'T12:00:00');
@@ -1353,6 +1360,7 @@ function resolveExercises(workout,ds){
 }
 
 function getWorkoutForDate(ds){
+  ds=dateOf(ds);
   const phase=getActivePhase();if(!phase)return null;
   const d=new Date(ds+'T12:00:00'),start=new Date(phase.startDate+'T12:00:00');
   const diff=Math.floor((d-start)/86400000);
@@ -1366,7 +1374,7 @@ function getWorkoutForDate(ds){
   const wo=DB.workouts().find(w=>w.id===s.workoutId)||null;
   return resolveExercises(wo,ds);
 }
-function isManualRest(ds){return DB.manualRest().includes(ds);}
+function isManualRest(ds){return DB.manualRest().includes(dateOf(ds));}
 function toggleManualRest(ds){
   const mr=DB.manualRest();
   const idx=mr.indexOf(ds);
@@ -1388,7 +1396,7 @@ function getPhaseStats(p){
   let sessions=0,totalVol=0,prCount=0;
   const sessionLogs=[];
   Object.entries(logs).forEach(([ds,log])=>{
-    const d=new Date(ds+'T12:00:00');
+    const d=new Date(dateOf(ds)+'T12:00:00');
     if(d>=start&&d<end){
       sessions++;
       const vol=calcVolume(log);
@@ -1423,7 +1431,7 @@ function openPhaseSummary(id){
   } else {
     h+=`<div class="sec-title mb8">Session Log</div>`;
     sessionLogs.forEach(({ds,log,vol,prs},idx)=>{
-      const d=new Date(ds+'T12:00:00');
+      const d=new Date(dateOf(ds)+'T12:00:00');
       const dateStr=d.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
       h+=`<div class="phase-summary-session">
         <div class="phase-summary-session-hdr" onclick="togglePhaseSess('pss-${idx}')">
@@ -1487,7 +1495,7 @@ function getLastLog(exName, excludeDate){
     if(ds===excludeDate)continue;
     const ex=logs[ds].exercises.find(e=>sameEx(e.name,exName)&&!e.isRun&&!e.isBW);
     if(ex&&ex.sets?.some(s=>s.weight||s.reps)){
-      const d=new Date(ds+'T12:00:00');
+      const d=new Date(dateOf(ds)+'T12:00:00');
       return {...ex,_date:d.toLocaleDateString('en-US',{month:'short',day:'numeric'})};
     }
   }return null;
@@ -1501,7 +1509,7 @@ function getLastNote(exName, excludeDate){
     if(ds===excludeDate)continue;
     const ex=logs[ds].exercises?.find(e=>sameEx(e.name,exName));
     if(ex&&ex.notes&&ex.notes.trim()){
-      const d=new Date(ds+'T12:00:00');
+      const d=new Date(dateOf(ds)+'T12:00:00');
       return {notes:ex.notes.trim(),_date:d.toLocaleDateString('en-US',{month:'short',day:'numeric'})};
     }
   }return null;
@@ -1729,6 +1737,16 @@ function renderToday(){
     h+=`</div>`;
   }
 
+  const extra=sessionKeys(logs,today).slice(1);
+  extra.forEach(k=>{
+    const lg=logs[k];
+    const sets=lg.exercises.reduce((a,e)=>a+(e.isRun?(e.done?1:0):workSets(e.sets).filter(x=>x.done).length),0);
+    const v=calcVolume(lg);
+    h+=`<div class="workout-preview extra-sess"><div class="workout-preview-hdr"><div><div class="workout-preview-name">${esc(lg.workoutName)}</div>
+      <div style="font-size:0.7rem;color:var(--muted2);margin-top:2px">Workout ${sessionNum(k)} today · ${sets} sets${v>0?` · ${Math.round(v).toLocaleString()} ${UNIT()}`:''}</div></div>
+      <button class="btn btn-outline btn-sm" onclick="openLog('${k}')">✎ Edit</button></div></div>`;
+  });
+  if(logged)h+=`<div class="quick-row"><button class="btn btn-outline" onclick="openQuickStart()">+ Add another workout today</button></div>`;
   c.innerHTML=h;
   renderSyncBadge();
 }
@@ -1863,9 +1881,10 @@ function openLog(ds,opts){
 }
 function renderLogBody(){
   const ds=logDate,wo=logWo,xl=DB.logs()[ds];
-  const d=new Date(ds+'T12:00:00');
+  const d=new Date(dateOf(ds)+'T12:00:00');
   const phaseWeek=!wo.quick&&getActivePhase()?` · Week ${isWeekA(ds)?'A':'B'}`:'';
-  document.getElementById('log-title').textContent=`${wo.name} · ${d.toLocaleDateString('en-US',{month:'short',day:'numeric'})}${phaseWeek}`;
+  const nth=sessionNum(ds)>1?` · Workout ${sessionNum(ds)}`:'';
+  document.getElementById('log-title').textContent=`${wo.name} · ${d.toLocaleDateString('en-US',{month:'short',day:'numeric'})}${phaseWeek}${nth}`;
   let h='';
   wo.exercises.forEach((ex,ei)=>{
     const exl=(xl?.exercises?.[ei]&&sameEx(xl.exercises[ei].name,ex.name))?xl.exercises[ei]:xl?.exercises?.find(e=>sameEx(e.name,ex.name));
@@ -1976,7 +1995,7 @@ function showFinish(ds,newPRs){
   const sets=log.exercises.reduce((a,e)=>a+(e.isRun?0:workSets(e.sets).filter(x=>x.done).length),0);
   const mins=log.startedAt&&log.finishedAt?Math.round((Date.parse(log.finishedAt)-Date.parse(log.startedAt))/60000):null;
   const dur=mins&&mins>=3&&mins<=300?(mins>=60?`${Math.floor(mins/60)}h ${mins%60}m`:`${mins} min`):null;
-  const d=new Date(ds+'T12:00:00');
+  const d=new Date(dateOf(ds)+'T12:00:00');
   finData={name:log.workoutName,date:d.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'}),vol,delta,sets,dur,prs:newPRs,unit:UNIT()};
   const tiles=[[sets,'Sets'],[vol>0?Math.round(vol).toLocaleString():'—',`Volume (${UNIT()})`],[dur||'—','Time']];
   document.getElementById('fin-body').innerHTML=`
@@ -2102,7 +2121,7 @@ function openQuickStart(){
   document.getElementById('qs-ov').classList.add('open');
 }
 function closeQuickStart(){document.getElementById('qs-ov').classList.remove('open');}
-function startQuick(woId){closeQuickStart();track('quick_start',{from_saved:!!woId});openLog(todayStr(),woId?{woId}:{quick:true});}
+function startQuick(woId){closeQuickStart();const k=nextSessionKey(DB.logs(),todayStr());track('quick_start',{from_saved:!!woId,nth:sessionNum(k)});openLog(k,woId?{woId}:{quick:true});}
 
 // Show the quick +/- weight buttons only for one set per exercise: the one you're on
 function setActiveSet(ei,si){
@@ -2217,10 +2236,10 @@ function saveLog(){
         const E=e1rm(w,r);
         // Ignore a stored record that came from this same session, so re-saving re-flags it
         const stored=prs[key];
-        const bar=Math.max(priorBest[n]||0,(stored&&stored.date!==ds)?prE1(stored):0);
+        const bar=Math.max(priorBest[n]||0,(stored&&stored.date!==dateOf(ds))?prE1(stored):0);
         if(E>0&&E>bar+0.05){
           isPR=true;priorBest[n]=E;
-          prs[key]={weight:w,reps:r,date:ds,workoutName:wo.name,e1rm:fmtE(E)};
+          prs[key]={weight:w,reps:r,date:dateOf(ds),workoutName:wo.name,e1rm:fmtE(E)};
         }
       }
       const out={weight:w,reps:r,rpe:dv(`lrpe-${ei}-${si}`),done,pr:isPR};
@@ -2704,9 +2723,7 @@ function volWindow(offset){
   for(let i=0;i<7;i++){
     const d=new Date(base);
     d.setDate(d.getDate()-i-offset*7);
-    const log=logs[dateStr(d)];
-    if(!log)continue;
-    (log.exercises||[]).forEach(ex=>{
+    sessionKeys(logs,dateStr(d)).forEach(k=>(logs[k].exercises||[]).forEach(ex=>{
       const g=muscleFor(ex.name,ex.muscle);
       out[g]=out[g]||{sets:0,vol:0,rpe:[]};
       if(ex.isRun){if(ex.done)out[g].sets+=1;return;}
@@ -2717,7 +2734,7 @@ function volWindow(offset){
         out[g].vol+=w*r;
         const rp=parseFloat(st.rpe);if(rp)out[g].rpe.push(rp);
       });
-    });
+    }));
   }
   return out;
 }
@@ -2780,7 +2797,7 @@ function renderHLogs(){
   const c=document.getElementById('h-logs');
   if(!dates.length){c.innerHTML=`<div class="empty"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><p>No sessions logged yet.</p></div>`;return;}
   c.innerHTML=dates.map(ds=>{
-    const log=logs[ds],d=new Date(ds+'T12:00:00');
+    const log=logs[ds],d=new Date(dateOf(ds)+'T12:00:00');
     const sets=log.exercises.filter(e=>!e.isRun).reduce((a,e)=>a+(workSets(e.sets).filter(s=>s.done).length||0),0);
     const prs=log.exercises.reduce((a,e)=>a+(e.sets?.filter(s=>s.pr).length||0),0);
     const hasRun=log.exercises.some(e=>e.isRun);
@@ -2788,7 +2805,7 @@ function renderHLogs(){
     return`<div class="hist-card">
       <div class="hist-card-hdr" onclick="toggleHD('hd-${ds}')">
         <div style="flex:1"><div class="hist-name">${log.workoutName}</div>
-        <div class="hist-date">${d.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',year:'numeric'})}</div></div>
+        <div class="hist-date">${d.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',year:'numeric'})}${sessionNum(ds)>1?` · workout ${sessionNum(ds)}`:''}</div></div>
         <div class="fg">
           ${prs?`<span class="pr-badge">🏆${prs}</span>`:''}
           ${hasRun?'<span class="tag tag-purple" style="font-size:0.5rem">Run</span>':''}
@@ -2993,7 +3010,7 @@ function drawLineChart(canvasId,points,label,color){
   const show=[0,Math.floor(points.length/2),points.length-1].filter((v,i,a)=>a.indexOf(v)===i);
   show.forEach(i=>{
     const p=points[i];const x=pad.l+chartW*(i/(points.length-1||1));
-    const d=new Date(p.ds+'T12:00:00');
+    const d=new Date(dateOf(p.ds)+'T12:00:00');
     ctx.fillText(d.toLocaleDateString('en-US',{month:'numeric',day:'numeric'}),x,h-6);
   });
   // Label
