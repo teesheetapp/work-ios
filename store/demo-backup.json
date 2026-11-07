@@ -1,6 +1,6 @@
 {
  "version": 2,
- "exportedAt": "2026-11-09T12:00:00.000Z",
+ "exportedAt": "2026-11-06T12:00:00.000Z",
  "workouts": [
   {
    "id": "push",
@@ -378,7 +378,7 @@
   {
    "id": "ph",
    "name": "Push / Pull / Legs",
-   "weeks": 12,
+   "weeks": 26,
    "daysPerWeek": 3,
    "startDate": "2026-08-31",
    "schedule": [
